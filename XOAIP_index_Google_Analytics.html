@@ -1,0 +1,407 @@
+<!doctype html><html lang="vi"><head>
+<!-- Google Analytics 4 - XOAIP -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-976BL2Q3J5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-976BL2Q3J5');
+</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XOAIP</title><link rel="icon" type="image/png" sizes="48x48" href="/hacker-icon-48.png"><link rel="icon" type="image/png" sizes="96x96" href="/hacker-icon-96.png"><link rel="icon" type="image/svg+xml" href="/hacker-icon.svg"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="192x192" href="/hacker-icon-192.png"><style>
+:root{--green:#00ffa2;--red:#ff3659;--cyan:#00e8d3}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#07372f,#001012 75%);color:#dcfff6;font:12px Consolas,monospace}.wrap{max-width:1050px;margin:18px auto;padding:0 12px}.window{border:1px solid var(--cyan);background:#00191c}.top{padding:12px;color:var(--cyan);border-bottom:1px solid #096e67;font-weight:bold;display:flex;justify-content:space-between}.hero{display:grid;grid-template-columns:1fr 170px;gap:20px;padding:22px}.heading{font:900 clamp(20px,4vw,32px) Arial}.subtitle{color:#7fbdb4;margin:8px 0 18px}.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mode{background:#062923;border:1px solid #167d6b;color:#d7fff5;padding:15px;text-align:left;cursor:pointer;min-height:100px}.mode.active{border:2px solid var(--green);box-shadow:0 0 15px #00ffa244}.mode strong{display:block;font:900 15px Arial;margin:10px 0}.mode small{color:#a5ccc3}.symbol{color:var(--green);font-size:22px}.server{border:1px solid #0a746c;padding:12px;line-height:2.2}.server b{color:var(--green)}.panel{border:1px solid var(--red);margin-top:12px;padding:14px}.erase .panel,.check.approved .panel{border-color:var(--green)}.paneltitle{display:flex;justify-content:space-between;align-items:center;font:900 16px Arial;margin-bottom:12px}.tag{border:1px solid var(--red);color:var(--red);padding:6px 10px;font:900 10px Arial}.erase .tag,.check.approved .tag{border-color:var(--green);color:var(--green)}.statusgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:12px}.table,.checks{border:1px solid #0a746c;padding:10px}.tr,.cr{display:flex;justify-content:space-between;gap:10px;padding:8px 0}.tr:not(:last-child){border-bottom:1px solid #17403d}.tr b,.cr b{color:var(--green)}.check.warn .tr b,.check.warn .cr b{color:var(--red)}.inputpanel{border:1px solid var(--red);margin:12px 10px 0;padding:16px;background:#0b0d13}.erase .inputpanel,.check.approved .inputpanel{border-color:var(--green)}.inputhead{font:900 15px Arial;margin-bottom:12px}input{width:100%;background:#001016;color:white;border:1px solid #547783;border-radius:3px;padding:13px;outline:none}input:focus{border-color:var(--green)}.start{display:block;width:88%;min-height:52px;margin:14px auto 0;background:linear-gradient(#00ae70,#004d31,#00ba7b);border:2px solid var(--green);color:#e8fff4;font:bold italic clamp(15px,3vw,22px) Georgia,serif;text-shadow:0 0 9px var(--green);cursor:pointer;clip-path:polygon(4% 0,96% 0,100% 30%,100% 70%,96% 100%,4% 100%,0 70%,0 30%)}.start:disabled{opacity:.65;cursor:wait}.analysishead{color:var(--cyan);font-weight:bold;border-bottom:1px solid #0b766d;padding-bottom:10px}.analysisgrid{display:grid;grid-template-columns:1.5fr .85fr;gap:14px;margin-top:12px}.notice{border:1px solid var(--red);background:#2b0812;color:#ff5671;min-height:52px;display:flex;align-items:center;justify-content:center;text-align:center;font:900 15px Arial}.erase .notice,.check.approved .notice{border-color:var(--green);background:#063c2b;color:var(--green)}.terminal{height:185px;overflow:auto;padding:12px 5px;white-space:pre-wrap;overflow-wrap:anywhere;color:#9acbc6;line-height:1.8}.erase .terminal,.check.approved .terminal{color:#85e6b8}.progress{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px}.ring{width:126px;height:126px;border-radius:50%;background:conic-gradient(var(--red) var(--pct,0%),#173937 0);display:grid;place-items:center}.erase .ring,.check.approved .ring{background:conic-gradient(var(--green) var(--pct,0%),#173937 0)}.ringin{width:94px;height:94px;border-radius:50%;background:#00201e;display:grid;place-items:center;font:900 25px Arial}.erase .ringin,.erase .phase,.check.approved .ringin,.check.approved .phase{color:var(--green)}.phase{font-weight:bold}.bar{height:11px;width:100%;border:1px solid var(--green);border-radius:6px;overflow:hidden;background:#153333}.fill{height:100%;width:0;background:var(--red)}.erase .fill,.check.approved .fill{background:var(--green)}.error{color:#ff6a82;font-size:11px;min-height:16px;margin-top:8px}@media(max-width:650px){.hero,.statusgrid,.analysisgrid{grid-template-columns:1fr}.hero{padding:14px}.server{display:none}.mode{padding:10px;min-height:90px}.mode strong{font-size:12px}.inputpanel{margin-left:0;margin-right:0}.start{width:100%}}
+ .terminal .risk{color:#ff526d;font-weight:bold}.terminal .ok{color:#00ffa2;font-weight:bold}.terminal .sys{color:#00e8d3} .erase.denied .panel,.erase.denied .inputpanel,.erase.denied .tag,.erase.denied .notice{border-color:var(--red)}.erase.denied .tag,.erase.denied .tr b,.erase.denied .cr b,.erase.denied .notice,.erase.denied .phase,.erase.denied .ringin{color:var(--red)}.erase.denied .notice{background:#2b0812}.erase.denied .ring{background:conic-gradient(var(--red) var(--pct,0%),#173937 0)}.erase.denied .fill{background:var(--red)}.erase.denied .terminal{color:#ff7189}.erase.denied .terminal .ok{color:var(--red)}
+/* GG88 MATRIX HACKER BACKGROUND — decorative only; stronger visible effect */
+body{background:#010b0b!important;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 35%,rgba(0,85,55,.18),transparent 70%),linear-gradient(90deg,rgba(0,8,10,.60),rgba(0,20,14,.30),rgba(0,8,10,.60))}
+#matrix-rain{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.95}
+.wrap{position:relative;z-index:1;width:100%;max-width:1050px;margin:18px auto;padding:0 12px}
+.window,.panel,.inputpanel{background-color:rgba(0,16,19,.76);backdrop-filter:blur(3px)}
+@media(max-width:650px){.wrap{margin:8px auto;padding:0 8px}.hero{gap:12px}.modes{gap:7px}.mode{min-width:0}.mode strong{overflow-wrap:anywhere}.panel{margin-top:9px;padding:11px}.inputpanel{padding:12px}.terminal{height:155px}.progress{padding:10px 0}.ring{width:108px;height:108px}.ringin{width:82px;height:82px;font-size:22px}#matrix-rain{opacity:.68}}
+@media(max-width:380px){.mode{padding:8px}.mode strong{font-size:11px}.heading{font-size:20px}.tr,.cr{font-size:11px}.start{font-size:15px}}
+@media(prefers-reduced-motion:reduce){#matrix-rain{opacity:.13}}
+
+/* XOAIP: typography-only refinement. Layout, Matrix, Firebase and behaviors unchanged. */
+:root{font-synthesis:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+body{font-family:Inter,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;font-size:13px;line-height:1.5;letter-spacing:.005em}
+.heading{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:850;font-size:clamp(23px,2.6vw,34px);line-height:1.18;letter-spacing:-.025em}
+.subtitle{font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:11px;letter-spacing:.035em}
+.mode strong,.paneltitle,.inputhead,.notice{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:800;letter-spacing:.005em}
+.mode strong{font-size:15px;line-height:1.35}.mode small{font-size:12px;line-height:1.45}
+.paneltitle{font-size:17px;line-height:1.35}.inputhead{font-size:15px}
+.tr,.cr{font-size:12px;line-height:1.45}.tr b,.cr b{font-weight:750}
+.server,.terminal,.analysishead,.phase{font-family:"Cascadia Code","Consolas","SFMono-Regular",monospace}
+.server{font-size:11px;line-height:2.2}.terminal{font-size:12px;line-height:1.8}
+input{font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
+.start{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:850;font-style:normal;font-size:clamp(16px,2.2vw,22px);letter-spacing:.015em;line-height:1.2}
+.notice{font-size:15px}.ringin{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:850}
+@media(max-width:650px){body{font-size:12px}.heading{font-size:clamp(21px,5.5vw,28px)}.mode strong{font-size:12px}.mode small{font-size:11px}.paneltitle{font-size:15px}.tr,.cr{font-size:12px}.server{font-size:11px}.terminal{font-size:11px}.start{font-size:clamp(15px,4vw,19px)}.notice{font-size:13px}input{font-size:16px}}
+@media(max-width:380px){.heading{font-size:21px}.mode strong{font-size:11px}.tr,.cr{font-size:11px}.start{font-size:15px}}
+
+
+/* v1.4: system information matches the original USER green/cyan palette */
+.statusgrid{align-items:stretch}
+.statusgrid .table{min-width:0}
+.statusgrid .table .sys-inline-row{min-height:31px;gap:12px}
+.statusgrid .table .sys-inline-row span{color:#b5dcd5;flex:0 0 auto;font-size:12px}
+.statusgrid .table .sys-inline-row b{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:12px;font-weight:700;text-align:right;min-width:0;overflow-wrap:anywhere;line-height:1.4;color:var(--green)}
+.statusgrid .table .sys-inline-row #sys-online{color:var(--green)}
+.statusgrid .table .sys-inline-row #sys-online.sys-offline{color:#ff647b}
+.statusgrid .table .sys-inline-row #sys-protocol{color:var(--green)}
+.statusgrid .table .sys-inline-row #sys-protocol.sys-offline{color:var(--red)}
+@media(max-width:650px){
+ .statusgrid .table .sys-inline-row{min-height:35px}
+ .statusgrid .table .sys-inline-row span,.statusgrid .table .sys-inline-row b{font-size:12px}
+}
+
+/* XOAIP v1.4 — Live Activity, consistent with the existing cyan/green interface */
+.live-activity{max-width:1050px;margin:16px auto 30px;padding:0 12px;position:relative;z-index:1;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.live-activity-card{border:1px solid #008f81;background:linear-gradient(145deg,rgba(0,24,26,.98),rgba(0,12,15,.97));padding:17px;border-radius:13px;box-shadow:0 0 16px rgba(0,255,163,.06)}
+.live-activity-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
+.live-activity-heading{display:flex;align-items:center;gap:11px;font-size:17px;font-weight:800;color:#e5fff8}
+.live-activity-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#073d35;color:#00ffab}
+.live-activity-live{font-size:11px;letter-spacing:.09em;color:#00ffa2;font-weight:800}
+.live-activity-feed{max-height:340px;overflow-y:auto;display:grid;gap:7px;scrollbar-color:#008c78 #041719;scrollbar-width:thin}
+.live-activity-entry{background:#021619;border:1px solid #0b3436;border-radius:8px;padding:11px 13px;line-height:1.45;overflow-wrap:anywhere}
+.live-activity-entry-main{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;font-size:13px}
+.live-activity-dot{color:#00ffa2;margin-right:3px}.live-activity-user{color:#ffd23c;font-weight:800}.live-activity-result{font-weight:800}.live-activity-result.bad{color:#ff3659}.live-activity-result.good{color:#00ffa2}
+.live-activity-time{font-size:11px;color:#84aaa4;margin-left:15px;margin-top:3px}
+.live-activity-empty{padding:20px 12px;text-align:center;color:#91bdb4;font-size:13px;border:1px dashed #175354;border-radius:8px}
+.live-activity-note{margin:9px 2px 0;color:#79a69e;font-size:11px;line-height:1.5}
+@media(max-width:650px){.live-activity-card{padding:13px}.live-activity-heading{font-size:16px}.live-activity-entry{padding:10px}.live-activity-entry-main{font-size:12px}}
+
+.live-activity-sample-tag{font-size:10px;font-weight:800;color:#8cbbb2;border:1px solid #28635a;border-radius:4px;padding:2px 5px;margin-left:5px}
+.live-activity-real-tag{color:#00ffad;border-color:#008f81}
+.live-activity-section-label{color:#80c7b9;font-size:11px;font-weight:800;letter-spacing:.08em;margin:8px 2px 3px}
+.live-activity-feed{max-height:400px}
+.live-activity-time{font-variant-numeric:tabular-nums}
+.live-activity-demo-label{font:700 10px/1.5 Inter,system-ui,sans-serif;letter-spacing:.07em;color:#8bc4b8;margin:0 0 10px 3px}
+
+/* v1.6: simulated display profile, matching Matrix cyan-green theme */
+.modes{grid-template-columns:repeat(3,minmax(0,1fr))}
+.device-panel{margin-top:12px;padding:16px;border:1px solid var(--cyan);background:rgba(0,19,21,.96);color:#d7fff5}
+.device-panel[hidden],#device-form[hidden]{display:none!important}
+.device-tag{font:700 10px Inter,Arial,sans-serif;color:#00e8d3;border:1px solid #167d6b;padding:5px 7px}
+.device-hint{font:12px/1.65 Inter,Arial,sans-serif;color:#a3ccc5;margin:12px 0}
+.device-current{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.device-current .drow{background:#062923;border:1px solid #167d6b;padding:11px;display:flex;justify-content:space-between;gap:12px;align-items:center;min-width:0}
+.device-current .drow span{color:#9bbdb5;font:12px Inter,Arial,sans-serif}
+.device-current .drow b{font:700 12px Inter,Arial,sans-serif;color:#00ffa2;text-align:right;overflow-wrap:anywhere}
+.device-actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+.device-btn{background:#00c98d;color:#001e19;border:1px solid #00ffa2;padding:11px 16px;font:800 13px Inter,Arial,sans-serif;cursor:pointer}
+.device-btn.secondary{background:#032521;color:#00ffa2}
+.device-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.device-fields label{display:grid;gap:7px;font:700 12px Inter,Arial,sans-serif;color:#8acac0}
+.device-fields select{width:100%;min-width:0;background:#001419;color:#e3fff7;border:1px solid #167d6b;padding:11px 9px;font:13px Inter,Arial,sans-serif}
+.device-feedback{color:#00ffa2;font:12px Inter,Arial,sans-serif}
+@media(max-width:650px){.modes{grid-template-columns:repeat(2,minmax(0,1fr))}.modes #device-mode{grid-column:1/-1}.device-current,.device-fields{grid-template-columns:1fr}.device-panel{padding:12px}.device-current .drow{padding:10px}}
+
+/* v1.7 Desktop typography repair: Vietnamese diacritics, crisp weights, stable fallback. */
+:root{font-synthesis:none}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;text-rendering:optimizeLegibility}
+body,button,input,select,textarea{font-family:"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif}
+body{-webkit-font-smoothing:antialiased;line-height:1.55;letter-spacing:0}
+.heading,.mode strong,.paneltitle,.inputhead,.notice,.start,.tag,.device-panel h2,.device-panel h3{
+ font-family:"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif!important;
+ font-style:normal!important;
+ font-weight:750!important;
+ letter-spacing:0!important;
+ text-transform:none;
+}
+.heading{font-size:clamp(24px,2.8vw,34px)!important;line-height:1.28!important;padding-top:3px;padding-bottom:2px}
+.mode strong{font-size:15px!important;line-height:1.45!important}
+.paneltitle{font-size:16px!important;line-height:1.4!important}
+.start{font-size:clamp(16px,2vw,21px)!important;line-height:1.3!important;text-shadow:0 0 4px #00ffa255}
+.server,.tr,.cr,.device-panel,.device-panel input,.device-panel select{font-family:"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif!important}
+.server{font-size:12px;line-height:2}
+.mode,.mode small,.subtitle{line-height:1.5}
+.terminal{font-family:"Cascadia Code",Consolas,"Liberation Mono",monospace!important}
+@media(min-width:651px){.hero{grid-template-columns:minmax(0,1fr) 170px}.modes{grid-template-columns:repeat(3,minmax(0,1fr))}.mode{min-width:0;padding:14px}.mode strong{font-size:14px!important}}
+@media(max-width:650px){.heading{font-size:clamp(22px,5.5vw,29px)!important}.mode strong{font-size:12px!important}.start{font-size:clamp(15px,4vw,19px)!important}}
+
+/* v1.8: fourth control tile, same cyber palette; external link */
+.modes{grid-template-columns:repeat(4,minmax(0,1fr))}
+.mode-link{display:block;text-decoration:none;min-width:0;transition:border-color .15s,box-shadow .15s}
+.mode-link:hover,.mode-link:focus-visible{border-color:var(--green);box-shadow:0 0 12px #00ffa233;outline:none}
+.mode-link strong{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.25}
+@media(min-width:651px){.modes{grid-template-columns:repeat(4,minmax(0,1fr))}.mode{padding:11px}.mode strong{font-size:12px!important}.mode small{font-size:11px}}
+@media(max-width:650px){.modes{grid-template-columns:repeat(2,minmax(0,1fr))}.modes #device-mode{grid-column:auto}.mode{min-height:108px}.mode-link{padding:12px}.mode-link strong{font-size:12px}}
+@media(max-width:380px){.mode-link{padding:8px}.mode-link strong{font-size:11px}}
+</style></head><body><canvas id="matrix-rain" aria-hidden="true"></canvas><main class="wrap check" id="app"><div class="window"><div class="hero"><div><div class="heading">TRUNG TÂM ĐIỀU KHIỂN</div><div class="subtitle">CHỌN CHỨC NĂNG ĐỂ BẮT ĐẦU</div><div class="modes"><button class="mode active" id="check"><span class="symbol">⬡</span><strong>KIỂM TRA TÀI KHOẢN</strong><small>Kiểm tra · Phân tích · Báo cáo</small></button><button class="mode" id="erase"><span class="symbol">⌁</span><strong>XÓA MÃ ẨN</strong><small>Xử lý · Làm sạch · Hoàn tất</small></button><button class="mode" id="device-mode" type="button"><span class="symbol">▣</span><strong>ĐỔI THIẾT BỊ</strong><small>Hồ sơ hiển thị · Tùy chỉnh</small></button><a class="mode mode-link" id="safe-link" href="https://www.gg8835.com/?id=607446025" target="_blank" rel="noopener noreferrer" aria-label="TRUY CẬP LINK AN TOÀN (mở trang bên ngoài)"><span class="symbol">↗</span><strong>TRUY CẬP GAME CỔNG QUỐC TẾ AN TOÀN</strong><small>BẤM VÀO ĐỂ MỞ ↗</small></a></div></div><div class="server">SERVER : <b>QUỐC TẾ</b><br>STATUS : <b>ONLINE</b><br>VERSION : <b>1.8</b><br>PROCESS : <b id="serverprocess">READY</b></div></div></div><section class="panel"><div class="paneltitle"><span id="statusTitle">KIỂM TRA TÀI KHOẢN</span><span class="tag" id="tag">ALERT</span></div><div class="statusgrid"><div class="table"><div class="tr"><span>Trạng thái</span><b id="state">CHỜ KIỂM TRA</b></div><div class="tr"><span>Kết quả</span><b id="result">—</b></div><div class="tr"><span>Tiến độ</span><b id="statpct">0%</b></div><div class="tr sys-inline-row"><span>IP</span><b id="sys-ip">Đang kiểm tra…</b></div><div class="tr sys-inline-row"><span>DEVICE</span><b id="sys-device">Đang nhận diện…</b></div><div class="tr sys-inline-row"><span>OS</span><b id="sys-os">Đang nhận diện…</b></div><div class="tr sys-inline-row"><span>BROWSER</span><b id="sys-browser">Đang nhận diện…</b></div><div class="tr sys-inline-row"><span>STATUS</span><b id="sys-online">● ONLINE</b></div><div class="tr sys-inline-row"><span>LOCATION</span><b id="sys-location">Đang kiểm tra…</b></div><div class="tr sys-inline-row"><span>PROTOCOL</span><b id="sys-protocol">Đang kiểm tra…</b></div></div><div class="checks" id="checks"></div></div></section><section class="inputpanel"><div class="inputhead" id="inputTitle">🎮 NHẬP TÀI KHOẢN GAME</div><input id="account" autocomplete="off" placeholder="Nhập tên tài khoản..."><div class="error" id="error" aria-live="polite"></div><button class="start" id="start">❯❯ BẮT ĐẦU KIỂM TRA ❮❮</button></section><section class="panel"><div class="analysishead" id="analysisTitle">◉ QUÉT &amp; PHÂN TÍCH HỆ THỐNG</div><div class="analysisgrid"><div><div class="notice" id="notice">CHƯA BẮT ĐẦU KIỂM TRA</div><div class="terminal" id="terminal" aria-live="polite">&gt; GG88 SECURITY CONSOLE\n&gt; Hệ thống sẵn sàng.</div></div><div class="progress"><div class="ring" id="ring"><div class="ringin" id="pct">0%</div></div><div class="phase" id="phase">SẴN SÀNG</div><div class="bar"><div class="fill" id="fill"></div></div></div></div></section><section class="device-panel" id="device-panel" hidden aria-label="Đổi thiết bị">
+<div class="paneltitle">ĐỔI THIẾT BỊ <span class="device-tag"></span></div>
+<p class="device-hint"></p>
+<div class="device-current" id="device-current"></div>
+<div class="device-actions"><button type="button" id="device-switch" class="device-btn">⇄ CHUYỂN ĐỔI</button><button type="button" id="device-default" class="device-btn secondary">↺ CHỌN MẶC ĐỊNH</button></div>
+<form id="device-form" hidden>
+<div class="device-fields">
+<label>KHU VỰC IP<select name="region" id="dev-region"></select></label>
+<label>IP HIỂN THỊ<select name="ip" id="dev-ip"></select></label>
+<label>DEVICE<select name="device" id="dev-device"></select></label>
+<label>OS<select name="os" id="dev-os"></select></label>
+<label>BROWSER<select name="browser" id="dev-browser"></select></label>
+<label>STATUS<select name="status" id="dev-status"></select></label>
+<label>LOCATION<select name="location" id="dev-location"></select></label>
+<label>PROTOCOL<select name="protocol" id="dev-protocol"></select></label>
+</div><button type="submit" class="device-btn">✓ LƯU &amp; ÁP DỤNG</button>
+</form>
+<div class="device-feedback" id="device-feedback" role="status"></div>
+</section></main>
+<section class="live-activity" aria-labelledby="live-activity-title">
+  <div class="live-activity-card">
+    <div class="live-activity-head">
+      <div class="live-activity-heading" id="live-activity-title"><span class="live-activity-icon" aria-hidden="true">◉</span>Live Activity</div>
+      <span class="live-activity-live" id="live-clock" aria-label="Giờ hiện tại">--:--:--</span>
+    </div>
+    
+    <div class="live-activity-feed" id="live-activity-feed" aria-live="polite">
+      <div class="live-activity-empty" id="live-activity-empty"></div>
+    </div>
+    
+  </div>
+</section>
+
+
+<script type="module">
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+import {getAuth,signInWithEmailAndPassword,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+import {getDatabase,ref,onValue,set,remove} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js';
+const config={apiKey:'AIzaSyDTeP8whJwgfkvYjZUXCdBh7QJ2YIqHmoE',authDomain:'xoaip5.firebaseapp.com',databaseURL:'https://xoaip5-default-rtdb.asia-southeast1.firebasedatabase.app',projectId:'xoaip5',storageBucket:'xoaip5.firebasestorage.app',messagingSenderId:'426273442642',appId:'1:426273442642:web:2e651c9ca59b1573d125a5',measurementId:''};
+const app=initializeApp(config);const auth=getAuth(app);const db=getDatabase(app);const adminUID='33sm0kWNUmRERWwxcfJdYEY44PC2';
+export {auth,db,ref,onValue,set,remove,signInWithEmailAndPassword,signOut,onAuthStateChanged,adminUID};
+export function normalizeName(s){return s.trim().toLowerCase().replace(/[^a-z0-9_-]/g,'_')}
+export function watchApproval(name,callback){return onValue(ref(db,'approvedUsers/'+normalizeName(name)),s=>callback({connected:true,approved:s.exists()&&s.val()?.approved===true}),e=>callback({connected:false,approved:false,error:e.message}))}
+
+window.GG88Approval={watchApproval};
+window.dispatchEvent(new Event('gg88-firebase-ready'));
+</script><script>
+(()=>{'use strict';
+const app=document.getElementById('app'),$=id=>document.getElementById(id);
+let mode='check',timer=null;
+const labels={check:['Kiểm tra quyền','Quét dữ liệu','Phân tích','Bảo vệ tài khoản'],erase:['Khởi tạo phiên','Phân tích mã','Xử lý','Hoàn tất']};
+const scan=["[SYSTEM] Initializing advanced security analysis engine...", "[AUTH] Loading account verification modules...", "[NETWORK] Establishing diagnostic session...", "[MODULE] Loading security assessment rules...", "[SCAN] Reviewing authentication configuration...", "[CHECK] Checking session token structure...", "[ANALYSIS] Analyzing account access patterns...", "[SECURITY] Inspecting password policy indicators...", "[CHECK] Reviewing login protection settings...", "[SCAN] Evaluating access control parameters...", "[CHECK] Checking permission consistency...", "[SCAN] Analyzing recent session indicators...", "[NETWORK] Reviewing connection metadata...", "[CHECK] Inspecting security policy configuration...", "[MODULE] Loading extended risk assessment module...", "[SCAN] Scanning authorization boundaries...", "[ANALYSIS] Reviewing unusual activity indicators...", "[CHECK] Checking authentication fallback settings...", "[ANALYSIS] Processing session integrity indicators...", "[SCAN] Comparing access pattern categories...", "[RISK] Evaluating potential account exposure...", "[DETECT] Suspicious activity pattern flagged...", "[RISK] Reviewing elevated risk indicators...", "[SCAN] Checking protection layer status...", "[CHECK] Analyzing inconsistent session markers...", "[WARNING] HIGH RISK LEVEL DETECTED...", "[ANALYSIS] Reviewing suspicious authorization events...", "[SCAN] Examining possible configuration weaknesses...", "[ANALYSIS] Processing anomaly classification rules...", "[CHECK] Checking access policy exceptions...", "[RISK] Evaluating security exposure category...", "[WARNING] Multiple risk indicators flagged...", "[RISK] CRITICAL THREAT ASSESSMENT IN PROGRESS...", "[SCAN] Reviewing flagged session signatures...", "[ANALYSIS] Comparing account security indicators...", "[RISK] Calculating risk assessment score...", "[ANALYSIS] Analyzing elevated exposure patterns...", "[SCAN] Inspecting suspicious session categories...", "[CHECK] Checking account protection status...", "[SECURITY] Reviewing security response recommendations...", "[REPORT] Compiling high-risk findings...", "[WARNING] HIGH RISK: SECURITY EXPOSURE...", "[CHECK] Validating analysis output format...", "[ANALYSIS] Processing authentication risk indicators...", "[CHECK] Checking session consistency indicators...", "[SCAN] Evaluating additional security parameters...", "[SECURITY] Reviewing account policy compliance...", "[REPORT] Generating diagnostic report structure...", "[RISK] Assessing overall risk classification...", "[WARNING] CRITICAL SECURITY WARNING...", "[REPORT] Preparing final security summary...", "[CHECK] Reviewing flagged items for report...", "[REPORT] Formatting risk indicators...", "[VERIFY] Verifying diagnostic sequence status...", "[SYSTEM] Completing security assessment stages...", "[REPORT] Compiling final report output...", "[RESULT] SECURITY RISK: HIGH..."];
+const safeScan=["[SYSTEM] Initializing approved account status...", "[VERIFY] Administrator approval indicator 01 confirmed...", "[VERIFY] Administrator approval indicator 02 confirmed...", "[VERIFY] Administrator approval indicator 03 confirmed...", "[VERIFY] Administrator approval indicator 04 confirmed...", "[VERIFY] Administrator approval indicator 05 confirmed...", "[VERIFY] Administrator approval indicator 06 confirmed...", "[VERIFY] Administrator approval indicator 07 confirmed...", "[VERIFY] Administrator approval indicator 08 confirmed...", "[VERIFY] Administrator approval indicator 09 confirmed...", "[VERIFY] Administrator approval indicator 10 confirmed...", "[VERIFY] Administrator approval indicator 11 confirmed...", "[VERIFY] Administrator approval indicator 12 confirmed...", "[VERIFY] Administrator approval indicator 13 confirmed...", "[VERIFY] Administrator approval indicator 14 confirmed...", "[VERIFY] Administrator approval indicator 15 confirmed...", "[VERIFY] Administrator approval indicator 16 confirmed...", "[VERIFY] Administrator approval indicator 17 confirmed...", "[VERIFY] Administrator approval indicator 18 confirmed...", "[VERIFY] Administrator approval indicator 19 confirmed...", "[VERIFY] Administrator approval indicator 20 confirmed...", "[VERIFY] Administrator approval indicator 21 confirmed...", "[VERIFY] Administrator approval indicator 22 confirmed...", "[VERIFY] Administrator approval indicator 23 confirmed...", "[VERIFY] Administrator approval indicator 24 confirmed...", "[VERIFY] Administrator approval indicator 25 confirmed...", "[VERIFY] Administrator approval indicator 26 confirmed...", "[VERIFY] Administrator approval indicator 27 confirmed...", "[VERIFY] Administrator approval indicator 28 confirmed...", "[VERIFY] Administrator approval indicator 29 confirmed...", "[VERIFY] Administrator approval indicator 30 confirmed...", "[VERIFY] Administrator approval indicator 31 confirmed...", "[VERIFY] Administrator approval indicator 32 confirmed...", "[VERIFY] Administrator approval indicator 33 confirmed...", "[VERIFY] Administrator approval indicator 34 confirmed...", "[VERIFY] Administrator approval indicator 35 confirmed...", "[VERIFY] Administrator approval indicator 36 confirmed...", "[VERIFY] Administrator approval indicator 37 confirmed...", "[VERIFY] Administrator approval indicator 38 confirmed...", "[VERIFY] Administrator approval indicator 39 confirmed...", "[VERIFY] Administrator approval indicator 40 confirmed...", "[VERIFY] Administrator approval indicator 41 confirmed...", "[VERIFY] Administrator approval indicator 42 confirmed...", "[VERIFY] Administrator approval indicator 43 confirmed...", "[VERIFY] Administrator approval indicator 44 confirmed...", "[VERIFY] Administrator approval indicator 45 confirmed...", "[VERIFY] Administrator approval indicator 46 confirmed...", "[VERIFY] Administrator approval indicator 47 confirmed...", "[VERIFY] Administrator approval indicator 48 confirmed...", "[VERIFY] Administrator approval indicator 49 confirmed...", "[VERIFY] Administrator approval indicator 50 confirmed...", "[VERIFY] Administrator approval indicator 51 confirmed...", "[VERIFY] Administrator approval indicator 52 confirmed...", "[VERIFY] Administrator approval indicator 53 confirmed...", "[VERIFY] Administrator approval indicator 54 confirmed...", "[RESULT] ACCOUNT APPROVAL: CONFIRMED."];
+const eraseLogs=["[SYSTEM] Initializing hidden-code processing engine...", "[MODULE] Loading cleanup workflow components...", "[SCAN] Preparing code inspection sequence...", "[SCAN] Reviewing hidden-code signature catalog...", "[INIT] Initializing processing queue...", "[MODULE] Loading detection pattern definitions...", "[CHECK] Checking staged processing rules...", "[ANALYSIS] Reviewing suspicious code indicators...", "[SCAN] Scanning staged signature references...", "[DETECT] Suspicious code pattern flagged...", "[ANALYSIS] Evaluating potentially unsafe components...", "[THREAT] Reviewing high-risk signature categories...", "[THREAT] HIGH-RISK CODE SIGNATURE IDENTIFIED...", "[PROCESS] Preparing cleanup workflow...", "[REMOVE] Loading removal sequence...", "[CHECK] Validating processing stage configuration...", "[REMOVE] Processing flagged code entries...", "[CLEANUP] Reviewing staged threat records...", "[PROCESS] Preparing isolated cleanup steps...", "[CLEANUP] Executing cleanup workflow stage 01...", "[SYSTEM] Updating processing indicators...", "[CHECK] Checking staged code references...", "[REMOVE] Processing queued cleanup entries...", "[SCAN] Reviewing simulated threat catalog...", "[CLEANUP] Executing cleanup workflow stage 02...", "[VERIFY] Validating stage completion indicators...", "[SCAN] Reviewing flagged signatures...", "[PROCESS] Updating cleanup workflow state...", "[REMOVE] Processing remaining flagged entries...", "[CHECK] Checking cleanup stage integrity...", "[THREAT] Reviewing high-risk processing categories...", "[CLEANUP] Executing cleanup workflow stage 03...", "[VERIFY] Verifying processed signature records...", "[PROCESS] Updating processing state...", "[SCAN] Checking remaining staged indicators...", "[VERIFY] Running additional verification sequence...", "[CHECK] Reviewing cleanup progress...", "[PROCESS] Processing final queued entries...", "[CLEANUP] Executing cleanup workflow stage 04...", "[VERIFY] Checking workflow completion state...", "[SCAN] Validating sequence progress...", "[PROCESS] Reviewing cleanup output status...", "[VERIFY] Processing completion checks...", "[PROCESS] Finalizing cleanup stages...", "[SYSTEM] Updating security status indicators...", "[VERIFY] Running completion verification...", "[REPORT] Reviewing processed entry summary...", "[VERIFY] Checking final workflow state...", "[REPORT] Preparing completion summary...", "[PROCESS] Finalizing processing report...", "[CLEANUP] Completing cleanup workflow...", "[SYSTEM] Updating progress indicators...", "[VERIFY] Validating final output...", "[SUCCESS] Cleanup workflow sequence completed...", "[RESULT] PROCESSING STATUS: 100%..."];
+function pct(n){$('pct').textContent=n+'%';$('statpct').textContent=n+'%';$('ring').style.setProperty('--pct',n+'%');$('fill').style.width=n+'%'}
+function reset(){if(timer){clearInterval(timer);timer=null}app.classList.remove('warn');app.classList.remove('approved');app.classList.remove('denied');$('tag').textContent=mode==='erase'?'SAFE':'ALERT';pct(0);$('state').textContent=mode==='erase'?'CHỜ XỬ LÝ':'CHỜ KIỂM TRA';$('result').textContent='—';$('notice').textContent=mode==='erase'?'CHƯA BẮT ĐẦU XÓA MÃ ẨN':'CHƯA BẮT ĐẦU KIỂM TRA';$('phase').textContent='SẴN SÀNG';$('terminal').textContent='> GG88 SECURITY CONSOLE\n> System initialized.\n> Awaiting account input.';$('start').disabled=false;$('serverprocess').textContent='READY';$('error').textContent=''}
+function switchMode(m){mode=m;app.classList.toggle('erase',m==='erase');app.classList.toggle('check',m==='check');$('check').classList.toggle('active',m==='check');$('erase').classList.toggle('active',m==='erase');$('statusTitle').textContent=m==='erase'?'XÓA MÃ ẨN':'KIỂM TRA TÀI KHOẢN';$('tag').textContent=m==='erase'?'SAFE':'ALERT';$('inputTitle').textContent=m==='erase'?'⌁ NHẬP TÀI KHOẢN CẦN XỬ LÝ':'🎮 NHẬP TÀI KHOẢN GAME';$('analysisTitle').textContent=m==='erase'?'◉ XỬ LÝ MÃ ẨN':'◉ QUÉT & PHÂN TÍCH HỆ THỐNG';$('start').textContent=m==='erase'?'❯❯ BẮT ĐẦU XÓA ❮❮':'❯❯ BẮT ĐẦU KIỂM TRA ❮❮';$('checks').replaceChildren(...labels[m].map(s=>{const d=document.createElement('div');d.className='cr';const a=document.createElement('span');a.textContent='☑ '+s;const b=document.createElement('b');b.textContent='READY';d.append(a,b);return d}));reset()}
+function appendLine(line){const el=$('terminal'),div=document.createElement('div');div.textContent='> '+line;if(mode==='check'&&app.classList.contains('approved'))div.className='ok';else if(mode==='check'&&/HIGH RISK|CRITICAL|WARNING|THREAT|SECURITY RISK: HIGH/.test(line))div.className='risk';else if(mode==='erase'&&/SUCCESS|REMOVE|CLEANUP|RESULT|PROCESS/.test(line))div.className='ok';else if(/SYSTEM|MODULE|AUTH/.test(line))div.className='sys';el.appendChild(div);el.scrollTop=el.scrollHeight}
+$('account').addEventListener('input',()=>{if(!timer)reset()});
+$('check').addEventListener('click',()=>switchMode('check'));$('erase').addEventListener('click',()=>switchMode('erase'));
+$('start').addEventListener('click',async()=>{if(timer)return;const name=$('account').value.trim();if(!name){$('error').textContent='Vui lòng nhập tên tài khoản.';$('account').focus();return}$('error').textContent='';
+$('start').disabled=true;$('state').textContent='ĐANG XÁC MINH';$('serverprocess').textContent='VERIFYING';
+try{
+ if(!window.GG88Approval)await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error('Firebase chưa tải xong')),12000);window.addEventListener('gg88-firebase-ready',()=>{clearTimeout(timeout);resolve()},{once:true})});
+ const approval=await new Promise((resolve,reject)=>{let stop=()=>{};let done=false;const timeout=setTimeout(()=>{if(!done){done=true;stop();reject(Error('Không thể xác minh tài khoản'))}},12000);stop=window.GG88Approval.watchApproval(name,result=>{if(done)return;done=true;clearTimeout(timeout);resolve(result);queueMicrotask(()=>stop())})});
+ if(!approval.connected)throw Error('Không thể kết nối Firebase.');
+ window.gg88ApprovedForRun=approval.approved;
+}catch(err){$('state').textContent='LỖI KẾT NỐI';$('result').textContent='KHÔNG THỂ XÁC MINH';$('notice').textContent='KHÔNG THỂ XÁC MINH';$('serverprocess').textContent='ERROR';$('error').textContent=err.message;$('start').disabled=false;return}
+const isErase=mode==='erase',isApproved=window.gg88ApprovedForRun===true,lines=isErase?eraseLogs:(isApproved?safeScan:scan);app.classList.toggle('warn',!isErase&&!isApproved);app.classList.toggle('approved',!isErase&&isApproved);app.classList.toggle('denied',isErase&&!isApproved);$('tag').textContent=isErase?(isApproved?'SAFE':'ALERT'):(isApproved?'APPROVED':'ALERT');pct(0);$('state').textContent=isErase?'ĐANG XỬ LÝ':'ĐANG KIỂM TRA';$('result').textContent='ĐANG THỰC HIỆN';$('notice').textContent=isErase?'ĐANG XỬ LÝ MÃ ẨN...':'ĐANG PHÂN TÍCH...';$('phase').textContent='ĐANG THỰC HIỆN';$('serverprocess').textContent='RUNNING';$('start').disabled=true;$('terminal').textContent='> GG88 SECURITY CONSOLE';let n=0,idx=0;timer=setInterval(()=>{n=Math.min(100,n+1);pct(n);const target=Math.floor(n*lines.length/100);while(idx<target)appendLine(lines[idx++]);if(n===100){clearInterval(timer);timer=null;while(idx<lines.length)appendLine(lines[idx++]);$('state').textContent=isErase?(isApproved?'HOẠT ĐỘNG':'KHÔNG HOẠT ĐỘNG'):(isApproved?'HOẠT ĐỘNG':'CẢNH BÁO');$('result').textContent=isErase?(isApproved?'ĐÃ XÓA 100%':'KHÔNG THỂ XÓA'):(isApproved?'BẢO MẬT CAO 100%':'BẢO MẬT THẤP');$('notice').textContent=isErase?(isApproved?'✓ HOÀN TẤT':'✖ KHÔNG THỂ XÓA'):(isApproved?'✓ BẢO MẬT CAO':'✖ CẢNH BÁO BẢO MẬT');$('phase').textContent=isErase?'HOÀN TẤT':'HOÀN TẤT PHÂN TÍCH';$('serverprocess').textContent=isErase&&!isApproved?'DENIED':'COMPLETE';$('start').disabled=false;app.classList.toggle('warn',!isErase&&!isApproved);window.dispatchEvent(new CustomEvent('xoaip-activity-completed',{detail:{account:name,result:$('result').textContent,approved:isApproved,mode:isErase?'erase':'check',at:Date.now()}}))}},65)});
+switchMode('check');
+})();
+</script><script>
+/* Matrix visual background: no Firebase or account logic is changed. */
+(()=>{const canvas=document.getElementById('matrix-rain');if(!canvas)return;const ctx=canvas.getContext('2d');if(!ctx)return;
+let w=0,h=0,font=15,cols=[],last=0,frame=0;const chars='01アイウエオカキクケコサシスセソタチツテト';
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+function resize(){const dpr=Math.min(window.devicePixelRatio||1,2);w=window.innerWidth;h=window.innerHeight;canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);font=w<650?18:15;cols=Array.from({length:Math.ceil(w/font)},()=>Math.random()*(h/font));ctx.fillStyle='#010b0b';ctx.fillRect(0,0,w,h);ctx.font=font+'px monospace';for(let x=0;x<cols.length;x++){for(let y=0;y<h/font;y++){if(Math.random()<.24){ctx.fillStyle=Math.random()<.12?'#9effc9':'#008b54';ctx.fillText(chars[Math.floor(Math.random()*chars.length)],x*font,y*font)}}}}
+function draw(t){frame=requestAnimationFrame(draw);if(document.hidden||reduced.matches||t-last<(w<650?75:48))return;last=t;ctx.fillStyle='rgba(0,10,10,.085)';ctx.fillRect(0,0,w,h);ctx.font=font+'px monospace';for(let i=0;i<cols.length;i++){const y=cols[i]*font;const char=chars[Math.floor(Math.random()*chars.length)];ctx.fillStyle=Math.random()>.975?'#caffdf':'#00ff91';ctx.fillText(char,i*font,y);if(y>h&&Math.random()>.975)cols[i]=0;else cols[i]+=.62}}
+window.addEventListener('resize',resize,{passive:true});resize();frame=requestAnimationFrame(draw);})();
+</script>
+<script>
+/* System Info: display only; does not access Firebase or alter account logic. */
+(async function(){
+  const put=(id,value)=>{const el=document.getElementById(id);if(el){window.xoaipRealInfo=window.xoaipRealInfo||{};window.xoaipRealInfo[id]=value;el.textContent=window.xoaipDisplayOverride?.(id,value)??value;window.dispatchEvent(new Event('xoaip-info-updated'));}};
+  const ua=navigator.userAgent||'';
+  const mobile=/Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+  const tablet=/iPad|Tablet/i.test(ua)||(/Android/i.test(ua)&&!/Mobile/i.test(ua));
+  let os='Không xác định';
+  if(/iPhone|iPad|iPod/.test(ua)) os='iOS / iPadOS';
+  else if(/Android/.test(ua)) os='Android';
+  else if(/Windows/.test(ua)) os='Windows';
+  else if(/Mac OS X|Macintosh/.test(ua)) os='macOS';
+  else if(/Linux/.test(ua)) os='Linux';
+  const match=(re)=>{const m=ua.match(re);return m?m[1].replace(/_/g,'.'):'';};
+  const osVersion=match(/Android\s([\d.]+)/)||match(/(?:CPU (?:iPhone )?OS|iPhone OS)\s([\d_]+)/)||match(/Windows NT\s([\d.]+)/)||match(/Mac OS X\s([\d_.]+)/);
+  put('sys-os',os+(osVersion?' '+osVersion:''));
+  let browser='Trình duyệt';
+  if(/EdgA?\/([\d.]+)/.test(ua)) browser='Microsoft Edge '+match(/EdgA?\/([\d.]+)/);
+  else if(/OPR\/([\d.]+)/.test(ua)) browser='Opera '+match(/OPR\/([\d.]+)/);
+  else if(/Firefox\/([\d.]+)/.test(ua)) browser='Firefox '+match(/Firefox\/([\d.]+)/);
+  else if(/CriOS\/([\d.]+)/.test(ua)) browser='Google Chrome '+match(/CriOS\/([\d.]+)/);
+  else if(/Chrome\/([\d.]+)/.test(ua)) browser='Google Chrome '+match(/Chrome\/([\d.]+)/);
+  else if(/Version\/([\d.]+).*Safari/.test(ua)) browser='Safari '+match(/Version\/([\d.]+)/);
+  put('sys-browser',browser);
+  let device=tablet?'Tablet':mobile?'Điện thoại':'Desktop';
+  if(/iPhone/.test(ua))device='iPhone (không rõ model)';
+  else if(/iPad/.test(ua))device='iPad (không rõ model)';
+  else if(/Android/.test(ua)){
+    const androidModel=ua.match(/Android[^;)]*;\s*([^;)]+?)(?:\s+Build\/[^;)]*)?\)/i);
+    let candidate=androidModel?androidModel[1].trim():'';
+    candidate=candidate.replace(/^(?:[a-z]{2}(?:-[A-Z]{2})?;\s*)/i,'').replace(/\s+Build\/.*$/i,'');
+    if(candidate && !/^(?:wv|Mobile|Linux|Android|K|U|en-US|en-GB)$/i.test(candidate) && candidate.length<65) device=candidate;
+    else device=tablet?'Android Tablet':'Android (không rõ model)';
+  }
+  put('sys-device',device);
+  if(navigator.userAgentData && navigator.userAgentData.getHighEntropyValues){
+    try{
+      const info=await navigator.userAgentData.getHighEntropyValues(['model','platform','platformVersion','fullVersionList']);
+      if(info.model && /Android/i.test(info.platform||os))put('sys-device',info.model);
+      if(info.platform && info.platformVersion && !/Windows/i.test(info.platform))put('sys-os',info.platform+' '+info.platformVersion);
+      if(info.fullVersionList){
+        const item=info.fullVersionList.find(x=>/Google Chrome|Microsoft Edge|Opera/.test(x.brand));
+        if(item)put('sys-browser',item.brand+' '+item.version);
+      }
+    }catch(e){}
+  }
+  const updateOnline=()=>{const el=document.getElementById('sys-online');if(!el)return;el.textContent=navigator.onLine?'● ONLINE':'● OFFLINE';el.className=navigator.onLine?'sys-online':'sys-offline';};
+  window.addEventListener('online',updateOnline);
+  window.addEventListener('offline',updateOnline);
+  updateOnline();
+  const secure=location.protocol==='https:';
+  put('sys-protocol',secure?'♢ SECURE (HTTPS)':'⚠ NOT SECURE');
+  if(!secure)document.getElementById('sys-protocol').className='sys-offline';
+  try{
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),6000);
+    const res=await fetch('https://ipwho.is/',{signal:controller.signal,cache:'no-store'});
+    clearTimeout(timer);
+    if(!res.ok)throw new Error('IP service unavailable');
+    const data=await res.json();
+    if(data.success===false)throw new Error('IP lookup failed');
+    put('sys-ip',data.ip||'Không xác định');
+    put('sys-location',data.country||'Không xác định');
+  }catch(e){put('sys-ip','Không khả dụng');put('sys-location','Không khả dụng');}
+})();
+</script>
+
+<script>
+/* v1.5 demo feed. No Firebase reads or writes; never implies real-user activity. */
+(()=>{
+ const feed=document.getElementById('live-activity-feed');
+ if(!feed)return;
+ const clock=document.getElementById('live-clock');
+ const history=[];
+ const timeFmt=new Intl.DateTimeFormat('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+ const prefixes=['nhokxi','hoangtuan','lyanh','dodinh','tienhuynh','vunam','minhquan','baolong','thanhdat','quocbao','huyhoang','ngocanh','phuonglinh','duykhanh','hieupham','trongtin','hoangnam','thuytrang','quanghuy','namphong','phucanh','khanhlinh','vietanh','tuananh','duongminh','baotran','kietnguyen','lamvu','nhatminh','thanhson'];
+ const results=[['KHÔNG THỂ XÓA',false],['ĐÃ XÓA 100%',true],['BẢO MẬT THẤP',false],['BẢO MẬT CAO 100%',true]];
+ const PERIOD=15000,MAX_ROWS=50;
+ function hash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+ function activity(slot){
+   const at=slot*PERIOD;
+   const seed=hash('xoaip-v15-demo-'+slot);
+   const name=prefixes[seed%prefixes.length]+String(1000+(Math.floor(seed/31)%9000));
+   const choice=results[(seed>>>12)%results.length];
+   return {account:name,result:choice[0],approved:choice[1],at,sample:true};
+ }
+ function entry(item){
+   const el=document.createElement('div');el.className='live-activity-entry';
+   const main=document.createElement('div');main.className='live-activity-entry-main';
+   const dot=document.createElement('span');dot.className='live-activity-dot';dot.textContent='●';
+   const user=document.createElement('span');user.className='live-activity-user';user.textContent=item.account;
+   const result=document.createElement('span');result.className='live-activity-result '+(item.approved?'good':'bad');result.textContent=item.result;
+   const time=document.createElement('div');time.className='live-activity-time';time.textContent=timeFmt.format(new Date(item.at));
+   main.append(dot,user,result);el.append(main,time);return el;
+ }
+ function render(){
+   const slot=Math.floor(Date.now()/PERIOD);
+   const items=[...history];
+   // The newest 50 demo events are derived from real clock slots, so reloads
+   // and tab suspension never produce fabricated 'future' timestamps.
+   for(let i=0;i<MAX_ROWS;i++)items.push(activity(slot-i));
+   items.sort((a,b)=>b.at-a.at);
+   const fragment=document.createDocumentFragment();
+   for(const item of items.slice(0,MAX_ROWS))fragment.appendChild(entry(item));
+   feed.replaceChildren(fragment);
+ }
+ function updateClock(){if(clock)clock.textContent='● '+new Date().toLocaleTimeString('vi-VN',{hour12:false});}
+ window.addEventListener('xoaip-activity-completed',event=>{
+   const d=event.detail;
+   if(!d||typeof d.account!=='string'||typeof d.result!=='string')return;
+   history.unshift({account:d.account.slice(0,80),result:d.result.slice(0,100),approved:d.approved===true,at:Number(d.at)||Date.now(),sample:false});
+   if(history.length>20)history.length=20;
+   render();
+ });
+ let lastSlot=-1;
+ function tick(){updateClock();const slot=Math.floor(Date.now()/PERIOD);if(slot!==lastSlot){lastSlot=slot;render();}}
+ tick();setInterval(tick,1000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick();});
+})();
+</script>
+<script>
+/* v1.6 display-only profiles. Uses documentation-only IPs (RFC 5737); never modifies network settings or Firebase. */
+(()=>{
+const key='xoaip-v16-device-display-profile';
+const names=['IP','DEVICE','OS','BROWSER','STATUS','LOCATION','PROTOCOL'];
+const ids=['sys-ip','sys-device','sys-os','sys-browser','sys-online','sys-location','sys-protocol'];
+const form=document.getElementById('device-form'),panel=document.getElementById('device-panel'),mode=document.getElementById('device-mode');
+const select=(name,values)=>{const el=form.elements[name];for(const value of values){const opt=document.createElement('option');opt.value=value;opt.textContent=value;el.appendChild(opt);}};
+const regions=['Hà Nội','TP. Hồ Chí Minh','Đà Nẵng','Hải Phòng','Cần Thơ','Huế','Quảng Ninh','Bắc Ninh','Hưng Yên','Hải Dương','Thanh Hóa','Nghệ An','Hà Tĩnh','Quảng Bình','Quảng Trị','Quảng Nam','Quảng Ngãi','Bình Định','Phú Yên','Khánh Hòa','Ninh Thuận','Bình Thuận','Lâm Đồng','Đắk Lắk','Gia Lai','Kon Tum','Đắk Nông','Bình Dương','Đồng Nai','Bà Rịa - Vũng Tàu','Tây Ninh','Long An','Tiền Giang','Bến Tre','Vĩnh Long','Trà Vinh','Đồng Tháp','An Giang','Kiên Giang','Sóc Trăng','Bạc Liêu','Cà Mau','Hậu Giang'];
+select('region',regions);
+select('ip',['192.0.2.10','192.0.2.25','198.51.100.15','198.51.100.42','203.0.113.10','203.0.113.88']);
+select('device',['Desktop','Laptop','iPhone','iPhone 13','iPhone 14 Pro','iPhone 15 Pro Max','iPhone 16 Pro','iPhone 17 Pro','Samsung Galaxy S23 Ultra','Samsung Galaxy S24 Ultra','Samsung Galaxy S25 Ultra','Samsung Galaxy Z Fold6','OPPO Reno11','OPPO Find X8','Xiaomi 14','Xiaomi 15','Redmi Note 13','Redmi Note 14 Pro','vivo V30','vivo X200','Google Pixel 9 Pro','iPad Pro','MacBook Air','MacBook Pro']);
+select('os',['Windows 10','Windows 11','macOS 14','macOS 15','macOS 26','Android 12','Android 13','Android 14','Android 15','Android 16','iOS 17','iOS 18','iOS 26','iPadOS 18','Linux Ubuntu 24.04']);
+select('browser',['Google Chrome 156','Google Chrome 155','Microsoft Edge 156','Mozilla Firefox 145','Safari 18','Safari 26','Opera 122','Samsung Internet 28','Brave 1.82']);
+select('status',['● ONLINE','● OFFLINE']);
+select('location',['VIETNAM','Hà Nội, Việt Nam','TP. Hồ Chí Minh, Việt Nam','Đà Nẵng, Việt Nam','Cần Thơ, Việt Nam','Huế, Việt Nam','Tây Ninh, Việt Nam','Đồng Nai, Việt Nam','Quảng Ninh, Việt Nam','Khánh Hòa, Việt Nam']);
+select('protocol',['SECURE (HTTPS)','HTTP ','HTTPS / HTTP2 ','HTTPS / HTTP3 ']);
+
+/* Device -> compatible OS/browser defaults. Values remain editable. */
+const deviceFamilies={
+ applePhone:{os:['iOS 26','iOS 18','iOS 17'],browser:['Safari 26','Safari 18','Google Chrome (iOS)','Microsoft Edge (iOS)','Firefox (iOS)']},
+ appleTablet:{os:['iPadOS 18','iOS 26','iOS 18'],browser:['Safari 26','Safari 18','Google Chrome (iOS)','Microsoft Edge (iOS)']},
+ android:{os:['Android 16','Android 15','Android 14','Android 13','Android 12'],browser:['Google Chrome 156','Google Chrome 155','Samsung Internet 28','Microsoft Edge 156','Mozilla Firefox 145','Opera 122','Brave 1.82']},
+ windows:{os:['Windows 11','Windows 10'],browser:['Google Chrome 156','Google Chrome 155','Microsoft Edge 156','Mozilla Firefox 145','Opera 122','Brave 1.82']},
+ mac:{os:['macOS 26','macOS 15','macOS 14'],browser:['Safari 26','Safari 18','Google Chrome 156','Microsoft Edge 156','Mozilla Firefox 145','Brave 1.82']}
+};
+function deviceFamily(name){
+ if(/^iPhone/i.test(name))return 'applePhone';
+ if(/^iPad/i.test(name))return 'appleTablet';
+ if(/^MacBook/i.test(name))return 'mac';
+ if(/^(Desktop|Laptop)$/i.test(name))return 'windows';
+ return 'android';
+}
+function refill(name,options,selected){
+ const el=form.elements[name];el.replaceChildren();
+ for(const value of options){const opt=document.createElement('option');opt.value=value;opt.textContent=value;el.appendChild(opt);}
+ if(selected&&options.includes(selected))el.value=selected;
+}
+function syncDeviceOptions(preserve){
+ const family=deviceFamily(form.elements.device.value);
+ const options=deviceFamilies[family];
+ refill('os',options.os,preserve?form.elements.os.value:null);
+ refill('browser',options.browser,preserve?form.elements.browser.value:null);
+}
+form.elements.device.addEventListener('change',()=>syncDeviceOptions(false));
+function loadSelections(){
+ if(profile){
+  const fields={ip:'sys-ip',device:'sys-device',os:'sys-os',browser:'sys-browser',status:'sys-online',location:'sys-location',protocol:'sys-protocol'};
+  for(const [name,id] of Object.entries(fields)){
+   const value=profile[id];if(value&&[...form.elements[name].options].some(o=>o.value===value))form.elements[name].value=value;
+  }
+ }
+ syncDeviceOptions(true);
+}
+
+let profile=null;
+try{const p=JSON.parse(localStorage.getItem(key));if(p&&typeof p==='object')profile=p;}catch(e){}
+const showValue=(id,real)=>profile&&typeof profile[id]==='string'?profile[id]:real;
+window.xoaipDisplayOverride=showValue;
+function render(){
+ const values=window.xoaipRealInfo||{};
+ const box=document.getElementById('device-current');box.replaceChildren();
+ ids.forEach((id,i)=>{
+  const row=document.createElement('div');row.className='drow';const label=document.createElement('span');label.textContent=names[i];const val=document.createElement('b');val.textContent=showValue(id,values[id]||'Đang nhận diện…');row.append(label,val);box.appendChild(row);
+  const original=document.getElementById(id);if(original){original.textContent=showValue(id,values[id]||original.textContent);}
+ });
+}
+window.addEventListener('xoaip-info-updated',render);
+const other=document.querySelectorAll('#app > section:not(.device-panel)');
+function openDevice(){loadSelections();panel.hidden=false;other.forEach(el=>el.hidden=true);mode.classList.add('active');document.getElementById('check').classList.remove('active');document.getElementById('erase').classList.remove('active');render();}
+function closeDevice(){panel.hidden=true;other.forEach(el=>el.hidden=false);mode.classList.remove('active');}
+mode.addEventListener('click',openDevice);
+['check','erase'].forEach(id=>document.getElementById(id).addEventListener('click',closeDevice));
+document.getElementById('device-switch').addEventListener('click',()=>{form.hidden=!form.hidden;if(!form.hidden)form.scrollIntoView({behavior:'smooth',block:'nearest'});});
+document.getElementById('device-default').addEventListener('click',()=>{profile=null;localStorage.removeItem(key);form.hidden=true;form.elements.device.selectedIndex=0;syncDeviceOptions(false);document.getElementById('device-feedback').textContent='Đã khôi phục thông tin nhận diện mặc định.';render();});
+form.addEventListener('submit',event=>{event.preventDefault();profile={};for(let i=0;i<ids.length;i++){profile[ids[i]]=form.elements[['ip','device','os','browser','status','location','protocol'][i]].value;}profile['sys-location']=form.elements.location.value==='VIETNAM' ? form.elements.region.value+', VIETNAM' : form.elements.location.value;try{localStorage.setItem(key,JSON.stringify(profile));document.getElementById('device-feedback').textContent='Đã lưu hồ sơ hiển thị trên trình duyệt này. F5 vẫn giữ lựa chọn.';}catch(e){document.getElementById('device-feedback').textContent='Không thể lưu vào trình duyệt này.';}render();form.hidden=true;});
+render();
+})();
+</script><script type="module" src="./xoaip-chat.js"></script></body></html>

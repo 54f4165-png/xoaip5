@@ -1,0 +1,7 @@
+XOAIP v2.9
+- Bấm ảnh trong chat để xem toàn màn hình; Esc hoặc nút X để đóng.
+- Tin đã đọc được ghi bằng thời gian Firebase server; badge ẩn ngay khi đọc.
+- Khi có tin nhắn mới chưa đọc, badge xuất hiện lại.
+- Giữ Cloudinary và Firebase Spark.
+- Chỉ tải các file web trong ZIP lên repository tương ứng.
+- Chưa kiểm thử thực tế với Firebase triển khai; nếu lỗi quyền readStates cần kiểm tra Database Rules.

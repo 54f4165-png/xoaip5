@@ -1,0 +1,6 @@
+XOAIP USER  — Emerald Premium Responsive
+
+Thay các file trong ZIP lên repository USER (giữ đúng tên).
+Chỉ đổi HTML/CSS màn hình đăng nhập; xoaip-auth.js, xoaip-chat.js, Firebase xoaip5 và ADMIN không đổi.
+Đăng ký và đăng nhập bằng tên tài khoản + mật khẩu, không yêu cầu Gmail.
+Thử trên điện thoại và máy tính sau khi triển khai.

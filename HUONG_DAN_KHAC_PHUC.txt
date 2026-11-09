@@ -1,0 +1,12 @@
+XOAIP USER v1.9 - SUA QUYEN CHAT - Firebase xoaip5
+
+1. Firebase xoaip5 > Authentication: bật Anonymous cho USER, Email/Password cho ADMIN.
+2. Firebase xoaip5 > Realtime Database > Data: adminUids/<UID thực của tài khoản ADMIN> = Boolean true.
+3. Firebase xoaip5 > Realtime Database > Rules: sao lưu rules hiện tại, dán database.rules.json trong ZIP và Publish. Quy tắc chat lưu trong chatRooms.
+4. Triển khai cả index.html và xoaip-chat.js trong cùng thư mục gốc Vercel.
+5. Đăng nhập ADMIN; gửi tin nhắn thử từ USER, kiểm tra chatRooms trong Data.
+6. Gửi tệp: bật Firebase Storage và Publish storage.rules. Storage rules hiện tại yêu cầu custom claim admin=true cho ADMIN gửi/đọc tệp, chưa tự cấp claim qua adminUids. Không đưa service account lên web.
+7. Nếu còn permission_denied: kiểm tra đúng Firebase xoaip5, UID Authentication, Rules đã Publish, tab Network kiểm tra xoaip-chat.js HTTP 200.
+
+Thay đổi: Chat và ADMIN chia sẻ Firebase App mặc định/phiên đăng nhập; bỏ UID admin008 cố định; không thay đổi chức năng khác.
+Chưa thử nghiệm với Firebase/Vercel thật.

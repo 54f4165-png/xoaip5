@@ -1,0 +1,7 @@
+XOAIP SEO MỞ RỘNG
+- Giữ nguyên giao diện và logic trang chủ, Firebase, chat.
+- Bổ sung 5 trang hướng dẫn riêng có title, description, canonical và liên kết nội bộ.
+- sitemap.xml gồm 6 URL.
+- Sau khi deploy, kiểm tra từng URL /check-ip/, /kiem-tra-ip/, /xoa-ip/, /xoa-ma-an/, /kiem-tra-ma-an/ trả 200.
+- Gửi lại sitemap.xml trong Google Search Console và yêu cầu lập chỉ mục.
+- Các trang mới chỉ cung cấp thông tin, không khẳng định website thực hiện xóa IP hay mã độc thực tế.

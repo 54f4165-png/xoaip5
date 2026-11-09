@@ -1,0 +1,7 @@
+XOAIP v3.0: Khắc phục badge số đỏ không biến mất.
+- Khi đọc, lưu mốc đã đọc vào Firebase và bộ nhớ của trình duyệt.
+- Sau khi đóng chat, số đã đọc không xuất hiện lại trên cùng trình duyệt.
+- Khi có tin nhắn mới sau mốc đã đọc, số đỏ xuất hiện lại.
+- Nếu Firebase từ chối ghi readStates, số vẫn ẩn trên thiết bị hiện tại, nhưng KHÔNG đồng bộ giữa thiết bị.
+- Cần kiểm tra Firebase Realtime Database Rules cho chatRooms/$roomId/readStates.
+- Giữ Cloudinary, Firebase Spark, xem ảnh toàn màn hình.

@@ -1,0 +1,14 @@
+XOAIP USER  + ADMIN: USER ĐĂNG KÝ
+
+1. Giải nén 2 ZIP vào đúng 2 repository USER / ADMIN, thay thế file trùng tên.
+2. Firebase Console > Authentication > Sign-in method: bật Email/Password (giữ Anonymous nếu chat cũ cần).
+3. Firebase Console > Realtime Database > Rules: sao chép toàn bộ database.rules.json từ ZIP (cả hai bản giống nhau). CHÚ Ý: so sánh với rules đang chạy và hợp nhất nếu bạn đã có sửa đổi khác. Publish.
+4. Firebase Authentication > Settings > Authorized domains: thêm domain Vercel và domain riêng.
+5. Đăng ký một tài khoản USER mới với tên hiển thị + email + mật khẩu.
+6. Đăng nhập ADMIN được cấp adminUids/<UID>=true, xem mục USER ĐĂNG KÝ cập nhật tự động.
+
+Mục USER ĐĂNG KÝ tách biệt với danh sách USER được duyệt. Đăng ký không tự động phê duyệt tài khoản game.
+Không có mật khẩu trong RTDB/ADMIN. Tài khoản Firebase Authentication cũ chưa có hồ sơ sẽ được bổ sung khi đăng nhập USER.
+UID dùng để gắn chat và hồ sơ, lịch sử chat Anonymous cũ không tự chuyển.
+Firebase không thể liệt kê toàn bộ Auth users từ client; danh sách mới gồm những người đã đăng ký hoặc đăng nhập qua USER được nâng cấp.
+Kiểm tra thực tế trên Firebase sau khi deploy, vì môi trường tạo ZIP không truy cập dự án của bạn.

@@ -1,0 +1,17 @@
+XOAIP USER v1.9 - FIX CHAT - FIREBASE xoaip5
+
+Đã sửa xoaip-chat.js: cấu hình chat dùng cùng dự án xoaip5 với index.html.
+KHÔNG sử dụng admin008-75abc.
+
+BẮT BUỘC TRÊN FIREBASE xoaip5:
+1) Authentication > Sign-in method: bật Anonymous (USER) và Email/Password (ADMIN).
+2) Realtime Database > Rules: kiểm tra/sao lưu rules hiện tại, sau đó áp dụng chatRooms từ database.rules.json (không ghi đè các quyền khác nếu đang dùng).
+3) Storage > Rules: kiểm tra/sao lưu và áp dụng storage.rules; đảm bảo Storage đã được kích hoạt.
+4) Realtime Database > Data > adminUids > <UID tài khoản đăng nhập ADMIN>: boolean true. UID thuộc Firebase xoaip5, không phải admin008-75abc.
+5) Deploy TOÀN BỘ nội dung ZIP lên Vercel, bao gồm xoaip-chat.js cùng thư mục với index.html.
+6) Mở DevTools > Network, kiểm tra xoaip-chat.js trả HTTP 200; nếu 404, thiếu file JS trên Vercel.
+7) Nếu Storage yêu cầu nâng cấp gói thanh toán, cần cấu hình billing phù hợp; không có cách bỏ qua bằng HTML.
+
+LƯU Ý: Chat lưu tin nhắn trong chatRooms; USER không tự được duyệt vào approvedUsers. Tệp ADMIN cần custom claim admin=true theo storage.rules hiện có. Không công khai khóa service account.
+
+Đây là bản sửa cấu hình và hiển thị; chưa thể kiểm thử trên Firebase/Vercel thật khi không có quyền truy cập dự án.

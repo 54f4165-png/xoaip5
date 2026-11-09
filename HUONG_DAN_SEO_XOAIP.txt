@@ -1,0 +1,10 @@
+XOAIP ONLINE - SEO
+
+Da cap nhat index.html: title, description, canonical, Open Graph, Twitter metadata.
+Da them robots.txt va sitemap.xml cho trang chu.
+
+Trien khai: upload noi dung ZIP vao thu muc goc repository XOAIP USER tren GitHub.
+Kiem tra https://xoaip.online/robots.txt va https://xoaip.online/sitemap.xml.
+Google Search Console: them property https://xoaip.online/ va gui sitemap.xml.
+
+Luu y: Google khong dam bao xep hang. Khong quang cao chuc nang xoa IP hoac ma doc that neu website khong co chuc nang nay.

@@ -1,21 +1,548 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#031324"><title>XOAIP5 | Xóa mã ẩn · Kiểm tra tài khoản</title><style>
-:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#f0fcff;background:#020b16;--cyan:#04e9ff;--line:#155a7b}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 55% 28%,#0a3755 0%,#020e1c 53%,#01060e 100%);color:#f0fcff}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}.shell{max-width:1190px;margin:26px auto 50px;border:1px solid #6db5da;border-radius:23px;overflow:hidden;background:#020d1b;box-shadow:0 0 65px #009fff2a,0 0 0 8px #04203955}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:21px 30px;border-bottom:1px solid #124667;background:linear-gradient(180deg,#061e32,#031321)}.brand{display:flex;align-items:center;gap:12px;font-size:clamp(24px,3vw,35px);font-weight:900;letter-spacing:.4px}.brand svg{width:46px;filter:drop-shadow(0 0 10px #00dfff)}.account{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.pill{border:1px solid #2c6381;border-radius:100px;padding:10px 14px;background:#0a2b41}.online{color:#61f7a4}.tiny{font-size:12px;color:#8ec6d9}.btn-small{border:1px solid #2d83a8;background:#08253a;color:#d5f7ff;border-radius:10px;padding:9px 12px}.main{padding:18px 28px 32px}.tabs{display:flex;gap:12px;justify-content:center;margin:0 auto 0;max-width:780px;position:relative;z-index:2}.tab{flex:1;padding:17px 10px;color:#eafcff;background:linear-gradient(#0b3149,#062139);border:1px solid #438eb3;border-radius:14px;font-weight:800;font-size:17px;box-shadow:inset 0 0 10px #00baff10}.tab.active,.primary{color:#fff;background:linear-gradient(180deg,#00f0fa 0%,#00add4 35%,#00557e 100%);border:2px solid #9dfdff;box-shadow:0 0 18px #00eaff92,inset 0 3px 10px #bdffff70;text-shadow:0 1px 2px #003c58}.hero{height:245px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(90deg,#031323bb,transparent 30%,transparent 70%,#031323bb),url('hero-cyber.webp') center 47% / cover no-repeat;border-bottom:1px solid #0a3b5c}.hero:after{content:'';position:absolute;bottom:0;left:0;right:0;height:38px;background:linear-gradient(transparent,#031625)}.hero .shield{display:none}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 215px;gap:14px}.panel{background:linear-gradient(145deg,#06283c,#02121f 72%);border:1px solid #2384aa;border-radius:16px;padding:18px;box-shadow:inset 0 0 18px #02a7ed17}.form{display:flex;gap:12px}.field{width:100%;min-width:0;padding:18px;border:1px solid #74d8f8;border-radius:11px;background:#061d30;color:white;outline:none}.field:focus{border-color:#00f6ff;box-shadow:0 0 0 3px #00f6ff22}.primary{border-radius:12px;padding:16px 24px;font-weight:900;white-space:nowrap;font-size:16px}.terminal{margin:17px 0 0;border:1px solid #00b9d6;border-radius:12px;background:#000e17;color:#61ff9c;padding:18px;min-height:146px;font:14px/1.8 ui-monospace,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;box-shadow:0 0 13px #00dfff28}.progressline{display:flex;align-items:center;gap:14px;margin-top:16px}.progress{flex:1;height:17px;background:#092f40;border:1px solid #176b82;border-radius:50px;overflow:hidden;box-shadow:0 0 10px #00e5ff55}.fill{width:0;height:100%;background:repeating-linear-gradient(120deg,#00f6ff 0 14px,#0c98c5 14px 22px);box-shadow:0 0 14px #00edff;transition:width .35s}.result{margin-top:16px;border:1px solid #3e8eb0;border-radius:14px;padding:21px;display:flex;align-items:center;gap:18px;background:linear-gradient(90deg,#063047,#041b2c)}.result.success{border-color:#15e78e;background:linear-gradient(90deg,#053b2d,#042b24);box-shadow:0 0 14px #16ff8e33}.result.danger{border-color:#fa546b;background:#34141d}.result svg{width:55px;flex:none;filter:drop-shadow(0 0 8px #08cfff)}.result strong{font-size:24px;color:#d8faff}.result.success strong,.result.success b{color:#60ffab}.result.danger strong,.result.danger b{color:#ff8291}.result p{margin:8px 0 0;line-height:1.6}.side{text-align:center;display:flex;flex-direction:column;justify-content:space-between;gap:18px}.avatar{width:98px;height:98px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(#1679a3,#052238);border:2px solid #00e9ff;box-shadow:0 0 20px #00e7ff7a;font-size:48px;margin:5px auto 15px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.feature{border:1px solid #1683ac;border-bottom:2px solid #00d9ee;border-radius:13px;padding:17px 8px;text-align:center;background:linear-gradient(#073a54,#032138);font-weight:750}.feature .sym{display:block;color:#00e9ff;font-size:31px;margin-bottom:8px;text-shadow:0 0 12px #00e9ff}.support{border:1px solid #5affff;background:linear-gradient(#00dce9,#00698d);color:#fff;padding:14px;border-radius:30px;font-weight:800;box-shadow:0 0 14px #00e9ff6b}.history{margin-top:15px}.history h3{margin:0 0 14px}.history ul{padding:0;margin:0;list-style:none}.history li{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid #15405a;font-size:14px}.history small{color:#a4c8d8}.authgate{position:fixed;inset:0;background:#020c19ed;display:flex;align-items:center;justify-content:center;padding:18px;z-index:10}.authcard{width:min(440px,100%);padding:28px;border-radius:20px;border:1px solid #15b7dc;background:#06243a;box-shadow:0 0 60px #00e9ff44}.authcard h2{margin-top:0}.authcard input{margin:8px 0;width:100%}.authcard .primary{width:100%;margin-top:12px}.message{min-height:25px;color:#ff9ba7;font-size:13px}.hidden{display:none!important}.footer{text-align:center;color:#76a9bd;font-size:12px;margin-top:18px}.intro{text-align:center;font-size:12px;letter-spacing:3px;color:#68bcd4;margin:15px 0 16px}.side-illustration{margin:20px auto;width:100%;height:155px;background:url('hero-cyber.webp') center / cover;border:1px solid #116a8c;border-radius:13px;box-shadow:inset 0 0 20px #00b4f644}.header-badge{font-size:23px;color:#ffd66e;filter:drop-shadow(0 0 8px #ffba3a)}@media(max-width:760px){.shell{margin:0;border-radius:0;border-left:0;border-right:0}.top{padding:17px 14px;flex-wrap:wrap}.brand{font-size:24px}.brand svg{width:37px}.main{padding:16px 12px 24px}.account{font-size:12px;gap:6px}.pill{padding:7px 9px}.tabs{gap:7px}.tab{padding:14px 6px;font-size:13px}.hero{height:215px;background-position:center center}.workspace{grid-template-columns:1fr}.panel{padding:14px}.form{flex-direction:column}.primary{width:100%}.side{display:none}.result strong{font-size:19px}.feature{font-size:12px;padding:12px 4px}.terminal{font-size:12px}.history li{font-size:12px}.intro{margin:13px 0}}@media(max-width:390px){.brand{font-size:21px}.account .pill{max-width:145px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
-</style></head><body>
-<div id="authgate" class="authgate"><form id="loginform" class="authcard"><h2>🛡️ XOAIP5</h2><p>Đăng nhập để sử dụng dịch vụ kiểm tra tài khoản.</p><input class="field" id="email" type="email" placeholder="Email" autocomplete="username" required><input class="field" id="password" type="password" placeholder="Mật khẩu" autocomplete="current-password" required><button class="primary" type="submit">ĐĂNG NHẬP</button><p id="loginmsg" class="message" role="alert"></p><small class="tiny">Tài khoản đăng nhập cần được tạo trong Firebase Authentication.</small></form></div>
-<div class="shell"><header class="top"><div class="brand"><svg viewBox="0 0 100 110" fill="none" aria-hidden="true"><path d="M50 4 91 20v31c0 27-17 43-41 54C26 94 9 78 9 51V20L50 4Z" stroke="#63edff" stroke-width="7" fill="#064f7e"/><path d="m29 53 14 14 28-30" stroke="#9effff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>XÓA MÃ ẨN</div><div class="account"><span class="pill" id="who">Chưa đăng nhập</span><span class="tiny online" id="connection">● Chờ kết nối</span><span class="header-badge" aria-hidden="true">♛</span><button class="btn-small" id="logout">Đăng xuất</button></div></header><main class="main"><div class="tabs"><button class="tab active" data-mode="check">⌕ &nbsp; Kiểm tra tài khoản</button><button class="tab" data-mode="clean">✧ &nbsp; Xóa mã ẩn</button></div><div class="hero"><svg class="shield" viewBox="0 0 100 110" fill="none" aria-label="Biểu tượng bảo vệ"><path d="M50 4 91 20v31c0 27-17 43-41 54C26 94 9 78 9 51V20L50 4Z" stroke="#56eaff" stroke-width="6" fill="#065383"/><path d="m26 54 16 16 32-35" stroke="#b2ffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="intro">KIỂM TRA TÀI KHOẢN · XÓA MÃ ẨN</p><div class="workspace"><section><div class="panel"><form class="form" id="scanform"><input class="field" id="username" placeholder="Nhập tài khoản..." maxlength="80" required aria-label="Tên tài khoản"><button class="primary" id="scanbtn" type="submit">⌕ &nbsp; BẮT ĐẦU KIỂM TRA</button></form><div class="terminal" id="terminal" aria-live="polite">&gt; Hệ thống sẵn sàng.
-&gt; Đăng nhập và nhập tài khoản để tra cứu.
-&gt; Chưa thực hiện thao tác.</div><div class="progressline"><div class="progress"><div class="fill" id="fill"></div></div><b id="percent">0%</b></div><div class="result" id="result"><svg viewBox="0 0 100 110" fill="none" aria-hidden="true"><path d="M50 5 90 20v30c0 26-16 42-40 54C26 92 10 76 10 50V20L50 5Z" stroke="#53d9f5" stroke-width="7"/><path d="m28 54 15 15 29-32" stroke="#53d9f5" stroke-width="8"/></svg><div><strong id="resulttitle">CHỜ KIỂM TRA</strong><p id="resulttext">Chưa có kết quả tra cứu.</p></div></div><div class="features"><div class="feature"><span class="sym">♢</span>Bảo mật</div><div class="feature"><span class="sym">ϟ</span>Xử lý nhanh</div><div class="feature"><span class="sym">◎</span>Ổn định</div></div></div><div class="panel history"><h3>▤ &nbsp; Lịch sử tra cứu phiên này</h3><ul id="history"><li><small>Chưa có thao tác</small></li></ul></div></section><aside class="panel side"><div><div class="avatar">♙</div><h3>Tài khoản</h3><p class="online" id="sideStatus">● Chờ đăng nhập</p></div><div><div class="side-illustration" aria-hidden="true"></div><h3>Hỗ trợ kỹ thuật</h3><button class="support" id="support">Liên hệ hỗ trợ</button></div></aside></div><p class="footer">XOAIP5 · Kết quả là trạng thái đối chiếu danh sách trong Firebase, không phải kiểm định bảo mật thiết bị hay xóa mã thực tế.</p></main></div>
+<!doctype html><html lang="vi"><head>
+<!-- Google Analytics 4 - XOAIP -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-976BL2Q3J5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-976BL2Q3J5');
+</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XOAIP Online | Check IP, Kiểm Tra IP và Mã Ẩn</title>
+<meta name="description" content="XOAIP Online: giao diện check IP, xem thông tin IP, kiểm tra tài khoản và trạng thái mã ẩn. Tìm hiểu các mục kiểm tra IP, xóa IP và xóa mã ẩn tại xoaip.online.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://xoaip.online/">
+<meta name="theme-color" content="#00191c">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://xoaip.online/#website","url":"https://xoaip.online/","name":"XOAIP Online","inLanguage":"vi-VN","description":"Website XOAIP Online với giao diện kiểm tra IP, thông tin tài khoản và trạng thái mã ẩn."},{"@type":"WebPage","@id":"https://xoaip.online/#webpage","url":"https://xoaip.online/","name":"XOAIP Online | Check IP, Kiểm Tra IP và Mã Ẩn","description":"Giao diện XOAIP Online giới thiệu các mục check IP, kiểm tra tài khoản và trạng thái mã ẩn.","inLanguage":"vi-VN","isPartOf":{"@id":"https://xoaip.online/#website"}}]}</script>
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="XOAIP Online">
+<meta property="og:title" content="XOAIP Online | Check IP, Kiểm Tra IP và Mã Ẩn">
+<meta property="og:description" content="XOAIP Online: giao diện check IP, xem thông tin IP, kiểm tra tài khoản và trạng thái mã ẩn. Tìm hiểu các mục kiểm tra IP, xóa IP và xóa mã ẩn tại xoaip.online.">
+<meta property="og:url" content="https://xoaip.online/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XOAIP Online | Check IP, Kiểm Tra IP và Mã Ẩn">
+<meta name="twitter:description" content="XOAIP Online: giao diện check IP, xem thông tin IP, kiểm tra tài khoản và trạng thái mã ẩn. Tìm hiểu các mục kiểm tra IP, xóa IP và xóa mã ẩn tại xoaip.online.">
+<link rel="icon" type="image/png" sizes="48x48" href="/hacker-icon-48.png"><link rel="icon" type="image/png" sizes="96x96" href="/hacker-icon-96.png"><link rel="icon" type="image/svg+xml" href="/hacker-icon.svg"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="192x192" href="/hacker-icon-192.png"><style>
+:root{--green:#00ffa2;--red:#ff3659;--cyan:#00e8d3}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#07372f,#001012 75%);color:#dcfff6;font:12px Consolas,monospace}.wrap{max-width:1050px;margin:18px auto;padding:0 12px}.window{border:1px solid var(--cyan);background:#00191c}.top{padding:12px;color:var(--cyan);border-bottom:1px solid #096e67;font-weight:bold;display:flex;justify-content:space-between}.hero{display:grid;grid-template-columns:1fr 170px;gap:20px;padding:22px}.heading{font:900 clamp(20px,4vw,32px) Arial}.subtitle{color:#7fbdb4;margin:8px 0 18px}.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mode{background:#062923;border:1px solid #167d6b;color:#d7fff5;padding:15px;text-align:left;cursor:pointer;min-height:100px}.mode.active{border:2px solid var(--green);box-shadow:0 0 15px #00ffa244}.mode strong{display:block;font:900 15px Arial;margin:10px 0}.mode small{color:#a5ccc3}.symbol{color:var(--green);font-size:22px}.server{border:1px solid #0a746c;padding:12px;line-height:2.2}.server b{color:var(--green)}.panel{border:1px solid var(--red);margin-top:12px;padding:14px}.erase .panel,.check.approved .panel{border-color:var(--green)}.paneltitle{display:flex;justify-content:space-between;align-items:center;font:900 16px Arial;margin-bottom:12px}.tag{border:1px solid var(--red);color:var(--red);padding:6px 10px;font:900 10px Arial}.erase .tag,.check.approved .tag{border-color:var(--green);color:var(--green)}.statusgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:12px}.table,.checks{border:1px solid #0a746c;padding:10px}.tr,.cr{display:flex;justify-content:space-between;gap:10px;padding:8px 0}.tr:not(:last-child){border-bottom:1px solid #17403d}.tr b,.cr b{color:var(--green)}.check.warn .tr b,.check.warn .cr b{color:var(--red)}.inputpanel{border:1px solid var(--red);margin:12px 10px 0;padding:16px;background:#0b0d13}.erase .inputpanel,.check.approved .inputpanel{border-color:var(--green)}.inputhead{font:900 15px Arial;margin-bottom:12px}input{width:100%;background:#001016;color:white;border:1px solid #547783;border-radius:3px;padding:13px;outline:none}input:focus{border-color:var(--green)}.start{display:block;width:88%;min-height:52px;margin:14px auto 0;background:linear-gradient(#00ae70,#004d31,#00ba7b);border:2px solid var(--green);color:#e8fff4;font:bold italic clamp(15px,3vw,22px) Georgia,serif;text-shadow:0 0 9px var(--green);cursor:pointer;clip-path:polygon(4% 0,96% 0,100% 30%,100% 70%,96% 100%,4% 100%,0 70%,0 30%)}.start:disabled{opacity:.65;cursor:wait}.analysishead{color:var(--cyan);font-weight:bold;border-bottom:1px solid #0b766d;padding-bottom:10px}.analysisgrid{display:grid;grid-template-columns:1.5fr .85fr;gap:14px;margin-top:12px}.notice{border:1px solid var(--red);background:#2b0812;color:#ff5671;min-height:52px;display:flex;align-items:center;justify-content:center;text-align:center;font:900 15px Arial}.erase .notice,.check.approved .notice{border-color:var(--green);background:#063c2b;color:var(--green)}.terminal{height:185px;overflow:auto;padding:12px 5px;white-space:pre-wrap;overflow-wrap:anywhere;color:#9acbc6;line-height:1.8}.erase .terminal,.check.approved .terminal{color:#85e6b8}.progress{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px}.ring{width:126px;height:126px;border-radius:50%;background:conic-gradient(var(--red) var(--pct,0%),#173937 0);display:grid;place-items:center}.erase .ring,.check.approved .ring{background:conic-gradient(var(--green) var(--pct,0%),#173937 0)}.ringin{width:94px;height:94px;border-radius:50%;background:#00201e;display:grid;place-items:center;font:900 25px Arial}.erase .ringin,.erase .phase,.check.approved .ringin,.check.approved .phase{color:var(--green)}.phase{font-weight:bold}.bar{height:11px;width:100%;border:1px solid var(--green);border-radius:6px;overflow:hidden;background:#153333}.fill{height:100%;width:0;background:var(--red)}.erase .fill,.check.approved .fill{background:var(--green)}.error{color:#ff6a82;font-size:11px;min-height:16px;margin-top:8px}@media(max-width:650px){.hero,.statusgrid,.analysisgrid{grid-template-columns:1fr}.hero{padding:14px}.server{display:none}.mode{padding:10px;min-height:90px}.mode strong{font-size:12px}.inputpanel{margin-left:0;margin-right:0}.start{width:100%}}
+ .terminal .risk{color:#ff526d;font-weight:bold}.terminal .ok{color:#00ffa2;font-weight:bold}.terminal .sys{color:#00e8d3} .erase.denied .panel,.erase.denied .inputpanel,.erase.denied .tag,.erase.denied .notice{border-color:var(--red)}.erase.denied .tag,.erase.denied .tr b,.erase.denied .cr b,.erase.denied .notice,.erase.denied .phase,.erase.denied .ringin{color:var(--red)}.erase.denied .notice{background:#2b0812}.erase.denied .ring{background:conic-gradient(var(--red) var(--pct,0%),#173937 0)}.erase.denied .fill{background:var(--red)}.erase.denied .terminal{color:#ff7189}.erase.denied .terminal .ok{color:var(--red)}
+/* GG88 MATRIX HACKER BACKGROUND — decorative only; stronger visible effect */
+body{background:#010b0b!important;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 35%,rgba(0,85,55,.18),transparent 70%),linear-gradient(90deg,rgba(0,8,10,.60),rgba(0,20,14,.30),rgba(0,8,10,.60))}
+#matrix-rain{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.95}
+.wrap{position:relative;z-index:1;width:100%;max-width:1050px;margin:18px auto;padding:0 12px}
+.window,.panel,.inputpanel{background-color:rgba(0,16,19,.76);backdrop-filter:blur(3px)}
+@media(max-width:650px){.wrap{margin:8px auto;padding:0 8px}.hero{gap:12px}.modes{gap:7px}.mode{min-width:0}.mode strong{overflow-wrap:anywhere}.panel{margin-top:9px;padding:11px}.inputpanel{padding:12px}.terminal{height:155px}.progress{padding:10px 0}.ring{width:108px;height:108px}.ringin{width:82px;height:82px;font-size:22px}#matrix-rain{opacity:.68}}
+@media(max-width:380px){.mode{padding:8px}.mode strong{font-size:11px}.heading{font-size:20px}.tr,.cr{font-size:11px}.start{font-size:15px}}
+@media(prefers-reduced-motion:reduce){#matrix-rain{opacity:.13}}
+
+/* XOAIP: typography-only refinement. Layout, Matrix, Firebase and behaviors unchanged. */
+:root{font-synthesis:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+body{font-family:Inter,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;font-size:13px;line-height:1.5;letter-spacing:.005em}
+.heading{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:850;font-size:clamp(23px,2.6vw,34px);line-height:1.18;letter-spacing:-.025em}
+.subtitle{font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:11px;letter-spacing:.035em}
+.mode strong,.paneltitle,.inputhead,.notice{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:800;letter-spacing:.005em}
+.mode strong{font-size:15px;line-height:1.35}.mode small{font-size:12px;line-height:1.45}
+.paneltitle{font-size:17px;line-height:1.35}.inputhead{font-size:15px}
+.tr,.cr{font-size:12px;line-height:1.45}.tr b,.cr b{font-weight:750}
+.server,.terminal,.analysishead,.phase{font-family:"Cascadia Code","Consolas","SFMono-Regular",monospace}
+.server{font-size:11px;line-height:2.2}.terminal{font-size:12px;line-height:1.8}
+input{font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
+.start{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:850;font-style:normal;font-size:clamp(16px,2.2vw,22px);letter-spacing:.015em;line-height:1.2}
+.notice{font-size:15px}.ringin{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:850}
+@media(max-width:650px){body{font-size:12px}.heading{font-size:clamp(21px,5.5vw,28px)}.mode strong{font-size:12px}.mode small{font-size:11px}.paneltitle{font-size:15px}.tr,.cr{font-size:12px}.server{font-size:11px}.terminal{font-size:11px}.start{font-size:clamp(15px,4vw,19px)}.notice{font-size:13px}input{font-size:16px}}
+@media(max-width:380px){.heading{font-size:21px}.mode strong{font-size:11px}.tr,.cr{font-size:11px}.start{font-size:15px}}
+
+
+/* v1.4: system information matches the original USER green/cyan palette */
+.statusgrid{align-items:stretch}
+.statusgrid .table{min-width:0}
+.statusgrid .table .sys-inline-row{min-height:31px;gap:12px}
+.statusgrid .table .sys-inline-row span{color:#b5dcd5;flex:0 0 auto;font-size:12px}
+.statusgrid .table .sys-inline-row b{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:12px;font-weight:700;text-align:right;min-width:0;overflow-wrap:anywhere;line-height:1.4;color:var(--green)}
+.statusgrid .table .sys-inline-row #sys-online{color:var(--green)}
+.statusgrid .table .sys-inline-row #sys-online.sys-offline{color:#ff647b}
+.statusgrid .table .sys-inline-row #sys-protocol{color:var(--green)}
+.statusgrid .table .sys-inline-row #sys-protocol.sys-offline{color:var(--red)}
+@media(max-width:650px){
+ .statusgrid .table .sys-inline-row{min-height:35px}
+ .statusgrid .table .sys-inline-row span,.statusgrid .table .sys-inline-row b{font-size:12px}
+}
+
+/* XOAIP v1.4 — Live Activity, consistent with the existing cyan/green interface */
+.live-activity{max-width:1050px;margin:16px auto 30px;padding:0 12px;position:relative;z-index:1;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.live-activity-card{border:1px solid #008f81;background:linear-gradient(145deg,rgba(0,24,26,.98),rgba(0,12,15,.97));padding:17px;border-radius:13px;box-shadow:0 0 16px rgba(0,255,163,.06)}
+.live-activity-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
+.live-activity-heading{display:flex;align-items:center;gap:11px;font-size:17px;font-weight:800;color:#e5fff8}
+.live-activity-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#073d35;color:#00ffab}
+.live-activity-live{font-size:11px;letter-spacing:.09em;color:#00ffa2;font-weight:800}
+.live-activity-feed{max-height:340px;overflow-y:auto;display:grid;gap:7px;scrollbar-color:#008c78 #041719;scrollbar-width:thin}
+.live-activity-entry{background:#021619;border:1px solid #0b3436;border-radius:8px;padding:11px 13px;line-height:1.45;overflow-wrap:anywhere}
+.live-activity-entry-main{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;font-size:13px}
+.live-activity-dot{color:#00ffa2;margin-right:3px}.live-activity-user{color:#ffd23c;font-weight:800}.live-activity-result{font-weight:800}.live-activity-result.bad{color:#ff3659}.live-activity-result.good{color:#00ffa2}
+.live-activity-time{font-size:11px;color:#84aaa4;margin-left:15px;margin-top:3px}
+.live-activity-empty{padding:20px 12px;text-align:center;color:#91bdb4;font-size:13px;border:1px dashed #175354;border-radius:8px}
+.live-activity-note{margin:9px 2px 0;color:#79a69e;font-size:11px;line-height:1.5}
+@media(max-width:650px){.live-activity-card{padding:13px}.live-activity-heading{font-size:16px}.live-activity-entry{padding:10px}.live-activity-entry-main{font-size:12px}}
+
+.live-activity-sample-tag{font-size:10px;font-weight:800;color:#8cbbb2;border:1px solid #28635a;border-radius:4px;padding:2px 5px;margin-left:5px}
+.live-activity-real-tag{color:#00ffad;border-color:#008f81}
+.live-activity-section-label{color:#80c7b9;font-size:11px;font-weight:800;letter-spacing:.08em;margin:8px 2px 3px}
+.live-activity-feed{max-height:400px}
+.live-activity-time{font-variant-numeric:tabular-nums}
+.live-activity-demo-label{font:700 10px/1.5 Inter,system-ui,sans-serif;letter-spacing:.07em;color:#8bc4b8;margin:0 0 10px 3px}
+
+/* v1.6: simulated display profile, matching Matrix cyan-green theme */
+.modes{grid-template-columns:repeat(3,minmax(0,1fr))}
+.device-panel{margin-top:12px;padding:16px;border:1px solid var(--cyan);background:rgba(0,19,21,.96);color:#d7fff5}
+.device-panel[hidden],#device-form[hidden]{display:none!important}
+.device-tag{font:700 10px Inter,Arial,sans-serif;color:#00e8d3;border:1px solid #167d6b;padding:5px 7px}
+.device-hint{font:12px/1.65 Inter,Arial,sans-serif;color:#a3ccc5;margin:12px 0}
+.device-current{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.device-current .drow{background:#062923;border:1px solid #167d6b;padding:11px;display:flex;justify-content:space-between;gap:12px;align-items:center;min-width:0}
+.device-current .drow span{color:#9bbdb5;font:12px Inter,Arial,sans-serif}
+.device-current .drow b{font:700 12px Inter,Arial,sans-serif;color:#00ffa2;text-align:right;overflow-wrap:anywhere}
+.device-actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+.device-btn{background:#00c98d;color:#001e19;border:1px solid #00ffa2;padding:11px 16px;font:800 13px Inter,Arial,sans-serif;cursor:pointer}
+.device-btn.secondary{background:#032521;color:#00ffa2}
+.device-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.device-fields label{display:grid;gap:7px;font:700 12px Inter,Arial,sans-serif;color:#8acac0}
+.device-fields select{width:100%;min-width:0;background:#001419;color:#e3fff7;border:1px solid #167d6b;padding:11px 9px;font:13px Inter,Arial,sans-serif}
+.device-feedback{color:#00ffa2;font:12px Inter,Arial,sans-serif}
+@media(max-width:650px){.modes{grid-template-columns:repeat(2,minmax(0,1fr))}.modes #device-mode{grid-column:1/-1}.device-current,.device-fields{grid-template-columns:1fr}.device-panel{padding:12px}.device-current .drow{padding:10px}}
+
+/* v1.7 Desktop typography repair: Vietnamese diacritics, crisp weights, stable fallback. */
+:root{font-synthesis:none}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;text-rendering:optimizeLegibility}
+body,button,input,select,textarea{font-family:"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif}
+body{-webkit-font-smoothing:antialiased;line-height:1.55;letter-spacing:0}
+.heading,.mode strong,.paneltitle,.inputhead,.notice,.start,.tag,.device-panel h2,.device-panel h3{
+ font-family:"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif!important;
+ font-style:normal!important;
+ font-weight:750!important;
+ letter-spacing:0!important;
+ text-transform:none;
+}
+.heading{font-size:clamp(24px,2.8vw,34px)!important;line-height:1.28!important;padding-top:3px;padding-bottom:2px}
+.mode strong{font-size:15px!important;line-height:1.45!important}
+.paneltitle{font-size:16px!important;line-height:1.4!important}
+.start{font-size:clamp(16px,2vw,21px)!important;line-height:1.3!important;text-shadow:0 0 4px #00ffa255}
+.server,.tr,.cr,.device-panel,.device-panel input,.device-panel select{font-family:"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif!important}
+.server{font-size:12px;line-height:2}
+.mode,.mode small,.subtitle{line-height:1.5}
+.terminal{font-family:"Cascadia Code",Consolas,"Liberation Mono",monospace!important}
+@media(min-width:651px){.hero{grid-template-columns:minmax(0,1fr) 170px}.modes{grid-template-columns:repeat(3,minmax(0,1fr))}.mode{min-width:0;padding:14px}.mode strong{font-size:14px!important}}
+@media(max-width:650px){.heading{font-size:clamp(22px,5.5vw,29px)!important}.mode strong{font-size:12px!important}.start{font-size:clamp(15px,4vw,19px)!important}}
+
+/* v1.8: fourth control tile, same cyber palette; external link */
+.modes{grid-template-columns:repeat(4,minmax(0,1fr))}
+.mode-link{display:block;text-decoration:none;min-width:0;transition:border-color .15s,box-shadow .15s}
+.mode-link:hover,.mode-link:focus-visible{border-color:var(--green);box-shadow:0 0 12px #00ffa233;outline:none}
+.mode-link strong{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.25}
+@media(min-width:651px){.modes{grid-template-columns:repeat(4,minmax(0,1fr))}.mode{padding:11px}.mode strong{font-size:12px!important}.mode small{font-size:11px}}
+@media(max-width:650px){.modes{grid-template-columns:repeat(2,minmax(0,1fr))}.modes #device-mode{grid-column:auto}.mode{min-height:108px}.mode-link{padding:12px}.mode-link strong{font-size:12px}}
+@media(max-width:380px){.mode-link{padding:8px}.mode-link strong{font-size:11px}}
+</style><style id="xoaip-v34-auth-style">#xoaip-auth-gate{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;overflow:auto;padding:18px;background:radial-gradient(ellipse at top,#063f31,#00100e 65%);font:15px system-ui,Arial;color:#e8fff6}#xoaip-auth-gate[hidden]{display:none!important}.xa-card{width:min(440px,100%);border:1px solid #04d69b;border-radius:22px;padding:28px;background:linear-gradient(145deg,#092b25,#001712);box-shadow:0 0 42px #00e89a30}.xa-logo{text-align:center;color:#f2cf82;font-size:24px;font-weight:900}.xa-sub{text-align:center;color:#8ecfb7;font-size:12px;margin:8px 0 25px}.xa-tabs{display:flex;gap:6px;margin:16px 0}.xa-tabs button{flex:1;border:1px solid #32775d;background:#0a2923;color:#c5ebda;padding:12px;border-radius:9px;cursor:pointer}.xa-tabs button.active{background:#087a53;color:white;border-color:#00e99c}.xa-card label{display:block;margin:14px 0 6px}.xa-card input{width:100%;background:#001d18;color:white;border:1px solid #258c6a;padding:13px;border-radius:8px;font:inherit}.xa-card button.xa-primary{width:100%;margin-top:18px;background:linear-gradient(#0ff0a0,#007c57);color:#001c15;border:1px solid #00ffa6;border-radius:9px;padding:13px;font-weight:900;cursor:pointer}.xa-card button:disabled{opacity:.55;cursor:wait}.xa-card .xa-link{background:none;border:0;color:#f2cf82;cursor:pointer;margin-top:12px;padding:5px}.xa-error{min-height:22px;color:#ff9c9c;font-size:13px;margin-top:12px}.xa-account{position:fixed;top:8px;right:8px;z-index:10001;background:#032a22;color:#d5ffef;border:1px solid #00d69b;border-radius:10px;padding:7px 10px;font:12px system-ui;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 16px)}.xa-account[hidden]{display:none!important}.xa-account button{background:#0a654d;color:white;border:1px solid #08b88b;border-radius:5px;padding:5px;cursor:pointer}.xa-account span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:220px}</style><style id="xoaip-emerald-premium">
+/* XOAIP Emerald Premium: auth-only visual enhancement, original app unchanged */
+#xoaip-auth-gate{isolation:isolate;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:clamp(20px,5vw,64px) 18px;overflow-y:auto;background:radial-gradient(ellipse 52% 55% at 50% 45%,#064a37 0%,#03291f 43%,#00130f 90%),#00130f;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;color:#effff8}
+#xoaip-auth-gate:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(122deg,transparent 12%,#c59a4626 12.08%,transparent 12.22%),linear-gradient(148deg,transparent 80%,#00eaa421 80.08%,transparent 80.24%),repeating-linear-gradient(90deg,transparent 0 91px,#36b78a0a 92px 93px);mask-image:linear-gradient(90deg,#000,transparent 42%,transparent 60%,#000)}
+#xoaip-auth-gate:after{content:'';position:fixed;width:min(880px,92vw);height:min(880px,92vw);border:1px solid #17a67818;border-radius:50%;box-shadow:0 0 0 80px #00e5a305,0 0 0 160px #00e5a304;z-index:-1;pointer-events:none}
+#xoaip-auth-gate .xa-card{position:relative;box-sizing:border-box;width:min(560px,100%);padding:clamp(26px,5vw,48px);border:1px solid #10e3a4;border-radius:28px;background:linear-gradient(158deg,#092b24f5 0%,#031b16fa 55%,#001510fa 100%);box-shadow:0 0 0 1px #ffd78b16 inset,0 25px 90px #000b,0 0 80px #00e69d24;overflow:hidden;animation:xa-appear .5s ease-out both}
+#xoaip-auth-gate .xa-card:before{content:'';position:absolute;top:0;left:14%;right:14%;height:2px;background:linear-gradient(90deg,transparent,#f5d27c,#00eaa7,#f5d27c,transparent);box-shadow:0 0 22px #eac16b;pointer-events:none}
+#xoaip-auth-gate .xa-card:after{content:'';position:absolute;bottom:0;left:25%;right:25%;height:1px;background:linear-gradient(90deg,transparent,#f6c96c,transparent);box-shadow:0 0 18px #eac16b;pointer-events:none}
+#xoaip-auth-gate .xa-emblem{width:84px;height:84px;margin:0 auto 17px;display:grid;place-items:center;position:relative;border-radius:24px;background:radial-gradient(circle at 35% 20%,#255d48,#05271e 70%);border:1px solid #b99b58;box-shadow:0 0 0 7px #10bd7a0c,0 0 34px #e4b95b30;color:#f6d68b}
+#xoaip-auth-gate .xa-emblem svg{width:48px;height:48px;filter:drop-shadow(0 0 8px #efc36a50)}
+#xoaip-auth-gate .xa-logo{font-size:clamp(21px,4vw,29px);letter-spacing:.035em;line-height:1.25;font-weight:900;text-align:center;background:linear-gradient(110deg,#c99547,#fff1b5 45%,#e5b764 78%,#fff0b4);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+#xoaip-auth-gate .xa-sub{font-size:10px;letter-spacing:.15em;line-height:1.7;text-transform:uppercase;text-align:center;color:#9fc9b7;margin:12px 0 24px}
+#xoaip-auth-gate .xa-heading{text-align:center;font-weight:800;font-size:clamp(20px,4vw,25px);margin:0 0 22px;color:#effff7;letter-spacing:.01em}
+#xoaip-auth-gate .xa-heading:before,#xoaip-auth-gate .xa-heading:after{content:' ';display:inline-block;width:18px;height:1px;background:linear-gradient(90deg,transparent,#12d99b);vertical-align:middle;margin:0 11px}
+#xoaip-auth-gate .xa-heading:after{transform:rotate(180deg)}
+#xoaip-auth-gate .xa-tabs{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:0 0 25px;padding:4px;border:1px solid #4d8469;border-radius:13px;background:#001610}
+#xoaip-auth-gate .xa-tabs button{min-height:49px;padding:12px 8px;border:1px solid transparent;border-radius:9px;background:transparent;color:#c0d8ca;font-size:13px;font-weight:800;letter-spacing:.035em;transition:background .2s,box-shadow .2s,color .2s}
+#xoaip-auth-gate .xa-tabs button.active{background:linear-gradient(180deg,#0ce69b,#007b56);border-color:#2effbb;color:#001a14;box-shadow:0 0 18px #00f4a350}
+#xoaip-auth-gate .xa-card label{font-size:13px;font-weight:700;color:#e2f6eb;margin:17px 0 9px}
+#xoaip-auth-gate .xa-card input{box-sizing:border-box;width:100%;min-height:55px;border:1px solid #287c61;border-radius:11px;padding:15px 16px;background:linear-gradient(180deg,#092b23,#05231c);font-size:15px;color:#fff;outline:none;transition:border-color .2s,box-shadow .2s}
+#xoaip-auth-gate .xa-card input::placeholder{color:#8aa99b}
+#xoaip-auth-gate .xa-card input:focus{border-color:#25f4ad;box-shadow:0 0 0 3px #00e6a41c,0 0 22px #00d89d18}
+#xoaip-auth-gate .xa-card button.xa-primary{min-height:57px;margin-top:27px;border-radius:12px;border:1px solid #39ffbd;background:linear-gradient(180deg,#20ffb6 0%,#00be82 54%,#008b62 100%);box-shadow:0 7px 28px #00c68b40,0 1px 0 #c2ffe4 inset;color:#00241a;font-size:16px;letter-spacing:.06em;font-weight:900;transition:filter .2s,transform .2s,box-shadow .2s}
+#xoaip-auth-gate .xa-card button.xa-primary:hover{filter:brightness(1.09);transform:translateY(-1px);box-shadow:0 9px 34px #00d99765}
+#xoaip-auth-gate .xa-card button.xa-primary:active{transform:translateY(0)}
+#xoaip-auth-gate .xa-error{margin-top:14px;min-height:22px;font-size:13px;line-height:1.5;color:#ffb1a7}
+#xoaip-auth-gate .xa-footnote{text-align:center;color:#88b7a2;font-size:11px;margin:12px 0 0;letter-spacing:.025em}
+#xoaip-auth-gate .xa-card .xa-link{color:#f6cf7e}
+@keyframes xa-appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){#xoaip-auth-gate{padding:18px 12px;align-items:center}#xoaip-auth-gate .xa-card{padding:25px 21px 22px;border-radius:20px}#xoaip-auth-gate .xa-emblem{width:67px;height:67px;margin-bottom:14px;border-radius:20px}#xoaip-auth-gate .xa-emblem svg{width:38px;height:38px}#xoaip-auth-gate .xa-sub{font-size:9px;letter-spacing:.08em;margin-bottom:20px}#xoaip-auth-gate .xa-heading{margin-bottom:19px}#xoaip-auth-gate .xa-tabs{margin-bottom:17px}#xoaip-auth-gate .xa-tabs button{min-height:46px}#xoaip-auth-gate .xa-card input{min-height:52px}#xoaip-auth-gate .xa-card button.xa-primary{min-height:54px;margin-top:22px}}
+@media(max-height:670px){#xoaip-auth-gate{align-items:flex-start}#xoaip-auth-gate .xa-card{margin:auto 0}}
+@media(prefers-reduced-motion:reduce){#xoaip-auth-gate .xa-card{animation:none}#xoaip-auth-gate *{transition:none!important}}
+</style><style id="xoaip-emerald-premium-v2">
+#xoaip-auth-gate{background:radial-gradient(ellipse at 8% 20%,#075b43,transparent 42%),radial-gradient(ellipse at 90% 80%,#134b37,transparent 40%),#010e0b!important;padding:clamp(16px,4vw,55px)!important}
+#xoaip-auth-gate .xa-card{width:min(1000px,100%)!important;min-height:590px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);column-gap:clamp(25px,5vw,70px);align-content:center;padding:clamp(28px,5vw,65px)!important;border:1px solid #1ae6a3!important;border-radius:30px!important;background:linear-gradient(120deg,#092d24f5,#031710fa 65%,#041c16fa)!important;box-shadow:0 35px 100px #000a,0 0 80px #00c78935!important}
+#xoaip-auth-gate .xa-emblem{grid-column:1;grid-row:1;width:115px!important;height:115px!important;margin:0 auto 25px!important;box-shadow:0 0 65px #00d99760!important}
+#xoaip-auth-gate .xa-emblem svg{width:65px!important;height:65px!important}
+#xoaip-auth-gate .xa-logo{grid-column:1;grid-row:2;font-size:clamp(28px,3vw,40px)!important}
+#xoaip-auth-gate .xa-sub{grid-column:1;grid-row:3;font-size:11px!important;margin:18px 0!important}
+#xoaip-auth-gate .xa-heading{grid-column:1;grid-row:4;font-size:clamp(22px,2.5vw,30px)!important;margin:18px 0!important}
+#xoaip-auth-gate .xa-tabs{grid-column:2;grid-row:1;align-self:end;margin:0 0 18px!important}
+#xoaip-auth-gate #xa-form{grid-column:2;grid-row:2 / span 3;align-self:center}
+#xoaip-auth-gate .xa-card .xa-link,#xoaip-auth-gate .xa-error{grid-column:2}
+#xoaip-auth-gate .xa-footnote{grid-column:1;grid-row:5}
+#xoaip-auth-gate .xa-card input{min-height:60px!important;background:#021b15!important}
+#xoaip-auth-gate .xa-card button.xa-primary{min-height:64px!important;font-size:16px!important}
+#xoaip-auth-gate .xa-tabs button{min-height:58px!important;font-size:14px!important}
+@media(max-width:760px){#xoaip-auth-gate{padding:16px 12px!important}#xoaip-auth-gate .xa-card{width:min(510px,100%)!important;min-height:0!important;display:flex!important;flex-direction:column!important;padding:clamp(22px,5vw,35px)!important;border-radius:23px!important}#xoaip-auth-gate .xa-emblem{width:78px!important;height:78px!important;margin:0 auto 14px!important}#xoaip-auth-gate .xa-emblem svg{width:48px!important;height:48px!important}#xoaip-auth-gate .xa-logo{font-size:clamp(23px,6vw,32px)!important}#xoaip-auth-gate .xa-sub{font-size:9px!important;margin:10px 0 15px!important}#xoaip-auth-gate .xa-heading{font-size:22px!important;margin:8px 0 19px!important}#xoaip-auth-gate .xa-tabs{width:100%;margin:0 0 16px!important}#xoaip-auth-gate #xa-form{width:100%}#xoaip-auth-gate .xa-card input{min-height:53px!important}#xoaip-auth-gate .xa-card button.xa-primary{min-height:56px!important}}
+@media(max-height:680px) and (min-width:761px){#xoaip-auth-gate .xa-card{min-height:0;padding:26px 46px!important}#xoaip-auth-gate .xa-emblem{width:76px!important;height:76px!important;margin-bottom:12px!important}}
+</style><style id="xoaip-auth-privacy-lock">
+/* Hide all USER content, floating chat, and overlays until Firebase confirms login. */
+body.xoaip-auth-locked{overflow:hidden!important;height:100dvh!important}
+body.xoaip-auth-locked > :not(#xoaip-auth-gate):not(script):not(style){display:none!important;visibility:hidden!important}
+body.xoaip-auth-locked #xoaip-auth-gate{display:flex!important;visibility:visible!important;position:fixed!important;inset:0!important;z-index:2147483640!important;overflow-x:hidden!important;overflow-y:auto!important;max-height:100dvh!important}
+body.xoaip-auth-locked #xoaip-auth-gate[hidden]{display:flex!important}
+</style><style id="xoaip5-cyber-cyan-redesign">
+/* XOAIP5 Cyber Cyan — visual redesign, original functionality retained */
+:root{--green:#35f5d7;--cyan:#12e9ff;--red:#ff526e}
+body{background:radial-gradient(ellipse at 50% -10%,#073e65 0%,#031b32 35%,#010915 75%)!important;color:#e9faff!important;font-family:Inter,system-ui,'Segoe UI',sans-serif!important}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 48%,rgba(0,204,255,.035) 50%,transparent 52%),repeating-linear-gradient(0deg,transparent 0 48px,rgba(30,198,255,.025) 49px 50px);z-index:0}
+#matrix-rain{opacity:.12!important}
+.wrap,.window,.panel,.inputpanel{position:relative}
+.window,.panel,.inputpanel,.device-panel{border-color:rgba(33,209,255,.45)!important;box-shadow:0 0 28px rgba(0,200,255,.09),inset 0 0 22px rgba(0,200,255,.025)!important;border-radius:20px!important;background:linear-gradient(150deg,rgba(5,32,54,.94),rgba(1,14,28,.97))!important}
+.hero{background:linear-gradient(180deg,rgba(2,27,49,.95),rgba(2,19,37,.85)),url('./shield-background.svg') center/cover no-repeat!important;border-radius:18px!important;min-height:200px}
+.heading{font-size:clamp(26px,4vw,48px)!important;color:#e9fbff!important;text-shadow:0 0 18px #05baff!important;letter-spacing:.045em!important}
+.subtitle{color:#78e7ff!important;letter-spacing:.18em!important}
+.modes{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+.mode{min-width:0!important;background:linear-gradient(150deg,#082f4a,#041525)!important;border:1px solid #1685b2!important;border-radius:15px!important;color:#effaff!important;box-shadow:inset 0 0 18px #052e4d!important}
+.mode.active{background:linear-gradient(180deg,#00d9f2,#04648d)!important;color:#fff!important;border-color:#5df8ff!important;box-shadow:0 0 18px #00c7edaa,inset 0 0 12px #80ffff88!important}
+.mode strong{color:inherit!important}
+.mode-link#safe-link{grid-column:1/-1!important;min-height:64px!important;display:flex!important;align-items:center!important;justify-content:center!important;flex-direction:row!important;gap:12px!important;font-size:clamp(15px,2vw,22px)!important;letter-spacing:.025em!important;background:linear-gradient(90deg,#073e60,#007d99,#073e60)!important;border-color:#4ef7ff!important;box-shadow:0 0 16px #00d7ee77!important}
+.mode-link#safe-link small{display:none!important}
+.inputpanel input,#account{background:#031e34!important;border:1px solid #67d7ff!important;border-radius:13px!important;color:#fff!important;min-height:52px!important}
+.start{background:linear-gradient(180deg,#13edff,#008dbb 65%,#06466a)!important;border:2px solid #83faff!important;color:white!important;box-shadow:0 0 19px #00cfff88,inset 0 0 12px #b5ffff77!important;border-radius:13px!important;font-weight:800!important}
+.paneltitle,.analysishead,.inputhead{color:#b8f7ff!important;text-shadow:0 0 12px #00cfff77!important}
+.terminal{background:#010d19!important;border:1px solid #13b8df!important;border-radius:12px!important;color:#42f8aa!important}
+.bar{border-color:#23e4f4!important}.fill{background:linear-gradient(90deg,#0075b7,#00f4ff)!important;box-shadow:0 0 12px #00f4ff!important}
+#xoaip-auth-gate{background:radial-gradient(ellipse at top,#064f76,#01101e 70%)!important}
+#xoaip-auth-gate .xa-card{border:1px solid #36dcff!important;background:linear-gradient(150deg,#082c46,#031426)!important;box-shadow:0 0 55px #00bdfb33!important}
+#xoaip-auth-gate .xa-primary{background:linear-gradient(180deg,#00edff,#007cba)!important;border:1px solid #70faff!important;box-shadow:0 0 20px #00d5ff66!important}
+#xoaip-auth-gate .xa-logo{color:#c8faff!important}
+@media(max-width:700px){.modes{gap:7px!important}.mode{padding:12px 6px!important;font-size:11px!important}.mode strong{font-size:11px!important}.mode-link#safe-link{padding:15px 8px!important;font-size:15px!important}.hero{min-height:160px}.heading{font-size:29px!important}}
+</style><style id="xoaip5-cyber-blue-redesign">
+/* XOAIP5 Cyber Blue Neon - visual layer only; original handlers and Firebase untouched */
+:root{--green:#35f99c;--cyan:#26dfff;--red:#ff4c72}
+body{background:radial-gradient(ellipse at 50% 8%,#073a65 0,#020e20 45%,#010716 100%)!important;color:#e9faff;font-family:Inter,"Segoe UI",Arial,sans-serif}
+body::before{background:radial-gradient(ellipse at 50% 20%,rgba(0,149,255,.13),transparent 62%),linear-gradient(120deg,rgba(0,50,90,.13),transparent 55%)}
+#matrix-rain{opacity:.16!important}
+.wrap{max-width:1210px;margin:22px auto;padding:0 16px}
+.window{border:1px solid #64baff;border-radius:24px;overflow:hidden;background:linear-gradient(145deg,rgba(0,20,41,.95),rgba(0,8,22,.96));box-shadow:0 0 40px #006bff25,0 30px 100px #0009}
+.top{padding:22px 28px;background:linear-gradient(90deg,#031b34,#031020);border-bottom:1px solid #15557e;color:#dffaff;font:800 26px Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.01em}
+.hero{display:block;padding:25px 32px 0;text-align:center;position:relative}
+.heading{font:900 clamp(28px,4vw,44px) Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.015em;color:#fff;text-shadow:0 0 18px #00c8ff55}
+.subtitle{color:#8ecce9;letter-spacing:.24em;font-size:11px;text-transform:uppercase}
+.modes{display:flex;justify-content:center;gap:14px;max-width:760px;margin:24px auto 12px}
+.mode{flex:1;min-height:70px;border:1px solid #4f9dd0;border-radius:15px;padding:13px 20px;background:linear-gradient(180deg,#0a3150,#041a30);text-align:center;box-shadow:inset 0 1px 10px #23c8ff13;color:#fff}
+.mode strong{font:800 clamp(14px,2vw,20px) Inter,"Segoe UI",Arial,sans-serif;margin:0}
+.mode small,.mode .symbol{display:none}
+.mode.active{border:2px solid #7dffff;background:linear-gradient(180deg,#00e6f5,#0378b5 58%,#00466b);box-shadow:0 0 20px #00e7ff99,inset 0 0 15px #7ffeff66}
+.server{display:none}
+.x5-shield-scene{height:260px;margin:4px 30px 0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-radius:16px;background:radial-gradient(ellipse at 50% 100%,#008fe064 0,transparent 45%),repeating-linear-gradient(115deg,transparent 0 42px,#0085c112 43px 44px,transparent 45px 90px),linear-gradient(180deg,#001126,#002546 60%,#001326)}
+.x5-shield-scene:before,.x5-shield-scene:after{content:"";position:absolute;width:310px;height:72px;border:3px solid #00dfff;border-radius:50%;bottom:14px;box-shadow:0 0 25px #00dfff, inset 0 0 18px #00dfff;transform:perspective(180px) rotateX(55deg)}
+.x5-shield-scene:after{width:440px;height:104px;bottom:-7px;border-color:#047ad3;opacity:.75}
+.x5-shield-outer{position:relative;z-index:1;width:180px;filter:drop-shadow(0 0 20px #00cfff)}
+.x5-shield-outer svg{display:block;width:100%}
+.inputpanel{max-width:950px;margin:0 auto 18px;padding:14px 22px 22px;border:0!important;border-radius:16px;background:transparent!important;backdrop-filter:none}
+.inputhead{display:none}
+.inputpanel input{border:2px solid #78bce8;background:linear-gradient(110deg,#051b32,#052942);border-radius:14px;min-height:60px;padding:16px 22px;font-size:19px;box-shadow:inset 0 0 14px #00a8ff16}
+.inputpanel input:focus{border-color:#5ef8ff;box-shadow:0 0 15px #00e7ff55}
+.start{width:100%;min-height:66px;clip-path:none;border:2px solid #8bffff;border-radius:15px;margin:14px auto 0;background:linear-gradient(180deg,#00edff,#008dbb 60%,#00537d);box-shadow:0 0 19px #00dfff8a,inset 0 0 15px #9bffff66;color:white;font:900 clamp(16px,2.5vw,26px) Inter,"Segoe UI",Arial,sans-serif;text-shadow:0 2px 5px #00384e}
+.panel{border:1px solid #196d9c!important;border-radius:18px;margin:16px 30px;padding:22px;background:linear-gradient(145deg,#02182ae8,#031021ef)}
+.paneltitle{color:#d8f7ff;font-size:19px}
+.statusgrid .table,.checks{border-color:#175c85;border-radius:10px}
+.tr:not(:last-child){border-bottom-color:#16435d}
+.analysishead{color:#76eaff;border-bottom-color:#1b7597}
+.terminal{color:#69dfb1}
+.bar{border-color:#32e8ff;background:#092f4a}.fill{box-shadow:0 0 12px currentColor}
+.xa-card{background:linear-gradient(145deg,#082c4d,#021122)!important;border-color:#32eaff!important;box-shadow:0 0 45px #00c8ff44!important}
+.xa-tabs button.active,.xa-card button.xa-primary{background:linear-gradient(180deg,#03dff7,#006ca7)!important;border-color:#7efaff!important;color:white!important}
+.xa-card input{background:#051e34!important;border-color:#419dcc!important}
+.xa-account{background:#031b30!important;border-color:#2cbeed!important}
+@media(min-width:850px){.hero{padding-top:26px}.x5-shield-scene{height:300px}.x5-shield-outer{width:210px}}
+@media(max-width:650px){.wrap{margin:8px auto;padding:0 7px}.window{border-radius:19px}.top{font-size:20px;padding:18px 16px}.hero{padding:14px 12px 0}.heading{font-size:28px}.subtitle{font-size:9px}.modes{gap:8px;margin:16px auto 10px}.mode{padding:12px 7px;min-height:60px;border-radius:12px}.mode strong{font-size:13px}.x5-shield-scene{height:205px;margin:0 10px}.x5-shield-outer{width:150px}.x5-shield-scene:before{width:230px}.x5-shield-scene:after{width:310px}.inputpanel{padding:12px 14px 18px}.inputpanel input{min-height:54px;font-size:16px}.start{min-height:59px;font-size:16px}.panel{margin:12px 12px;padding:14px}.statusgrid,.analysisgrid{grid-template-columns:1fr}}
+</style></head><body class="xoaip-auth-locked"><section id="xoaip-auth-gate" aria-label="Đăng nhập XOAIP"><div class="xa-card"><div class="xa-emblem" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 5 51 13v15c0 14-8 24-19 30C21 52 13 42 13 28V13L32 5Z" stroke="currentColor" stroke-width="3"/><rect x="24" y="29" width="16" height="14" rx="2.5" fill="currentColor"/><path d="M27 29v-5a5 5 0 0 1 10 0v5" stroke="currentColor" stroke-width="3"/></svg></div><div class="xa-logo">XOAIP5 · ĐĂNG NHẬP / ĐĂNG KÝ</div><div class="xa-sub">EMERALD SECURITY · ACCOUNT AUTHENTICATION</div><div class="xa-heading">Đăng nhập hệ thống</div><div class="xa-tabs"><button id="xa-tab-login" type="button" class="active">ĐĂNG NHẬP</button><button id="xa-tab-register" type="button">ĐĂNG KÝ</button></div><form id="xa-form"><div id="xa-name-wrap" hidden></div><label for="xa-email">Tên tài khoản</label><input id="xa-email" type="text" autocomplete="username" minlength="3" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" required placeholder="Nhập tên tài khoản (3–24 ký tự)"><label for="xa-password">Mật khẩu</label><input id="xa-password" type="password" autocomplete="current-password" minlength="6" required placeholder="Ít nhất 6 ký tự"><button class="xa-primary" id="xa-submit" type="submit">ĐĂNG NHẬP</button></form><button class="xa-link" id="xa-reset" type="button" hidden>Quên mật khẩu?</button><div class="xa-error" id="xa-error" role="status"></div><p class="xa-footnote">SECURE ACCOUNT ACCESS · XOAIP </p></div></section><div id="xa-account-bar" class="xa-account" hidden><span id="xa-current-name"></span><button id="xa-logout" type="button">ĐĂNG XUẤT</button></div><canvas id="matrix-rain" aria-hidden="true"></canvas><main class="wrap check" id="app"><div class="window"><div class="hero"><div><div class="heading">🛡 XÓA MÃ ẨN</div><div class="subtitle">CHỌN CHỨC NĂNG ĐỂ BẮT ĐẦU</div><div class="modes"><button class="mode active" id="check"><span class="symbol">⬡</span><strong>KIỂM TRA TÀI KHOẢN</strong><small>Kiểm tra · Phân tích · Báo cáo</small></button><button class="mode" id="erase"><span class="symbol">⌁</span><strong>XÓA MÃ ẨN</strong><small>Xử lý · Làm sạch · Hoàn tất</small></button><button class="mode" id="device-mode" type="button"><span class="symbol">▣</span><strong>ĐỔI THIẾT BỊ</strong><small>Hồ sơ hiển thị · Tùy chỉnh</small></button><a class="mode mode-link" id="safe-link" href="https://www.gg8835.com/?id=607446025" target="_blank" rel="noopener noreferrer" aria-label="TRUY CẬP LINK AN TOÀN (mở trang bên ngoài)"><span class="symbol">↗</span><strong>TRUY CẬP GAME CỔNG QUỐC TẾ AN TOÀN</strong><small>BẤM VÀO ĐỂ MỞ ↗</small></a></div></div><div class="server">SERVER : <b>QUỐC TẾ</b><br>STATUS : <b>ONLINE</b><br>VERSION : <b>1.8</b><br>PROCESS : <b id="serverprocess">READY</b></div></div></div><section class="panel"><div class="paneltitle"><span id="statusTitle">KIỂM TRA TÀI KHOẢN</span><span class="tag" id="tag">ALERT</span></div><div class="statusgrid"><div class="table"><div class="tr"><span>Trạng thái</span><b id="state">CHỜ KIỂM TRA</b></div><div class="tr"><span>Kết quả</span><b id="result">—</b></div><div class="tr"><span>Tiến độ</span><b id="statpct">0%</b></div><div class="tr sys-inline-row"><span>IP</span><b id="sys-ip">Đang kiểm tra…</b></div><div class="tr sys-inline-row"><span>DEVICE</span><b id="sys-device">Đang nhận diện…</b></div><div class="tr sys-inline-row"><span>OS</span><b id="sys-os">Đang nhận diện…</b></div><div class="tr sys-inline-row"><span>BROWSER</span><b id="sys-browser">Đang nhận diện…</b></div><div class="tr sys-inline-row"><span>STATUS</span><b id="sys-online">● ONLINE</b></div><div class="tr sys-inline-row"><span>LOCATION</span><b id="sys-location">Đang kiểm tra…</b></div><div class="tr sys-inline-row"><span>PROTOCOL</span><b id="sys-protocol">Đang kiểm tra…</b></div></div><div class="checks" id="checks"></div></div></section><div class="x5-shield-scene" aria-hidden="true"><div class="x5-shield-outer"><svg viewBox="0 0 220 245" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b8ffff"/><stop offset=".45" stop-color="#05c8ff"/><stop offset="1" stop-color="#0061a9"/></linearGradient><linearGradient id="core" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#103a70"/><stop offset="1" stop-color="#00132b"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M110 8L203 45V116Q200 188 110 234Q20 188 17 116V45Z" fill="#02162c" stroke="url(#edge)" stroke-width="7" filter="url(#glow)"/><path d="M110 29L180 58V119Q176 173 110 209Q44 173 40 119V58Z" fill="url(#core)" stroke="#36e9ff" stroke-width="2"/><path d="M66 121L98 150L159 87" fill="none" stroke="#86ffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/></svg></div></div><section class="inputpanel"><div class="inputhead" id="inputTitle">🎮 NHẬP TÀI KHOẢN GAME</div><input id="account" autocomplete="off" placeholder="Nhập tên tài khoản..."><div class="error" id="error" aria-live="polite"></div><button class="start" id="start">❯❯ BẮT ĐẦU KIỂM TRA ❮❮</button></section><section class="panel"><div class="analysishead" id="analysisTitle">◉ QUÉT &amp; PHÂN TÍCH HỆ THỐNG</div><div class="analysisgrid"><div><div class="notice" id="notice">CHƯA BẮT ĐẦU KIỂM TRA</div><div class="terminal" id="terminal" aria-live="polite">&gt; GG88 SECURITY CONSOLE\n&gt; Hệ thống sẵn sàng.</div></div><div class="progress"><div class="ring" id="ring"><div class="ringin" id="pct">0%</div></div><div class="phase" id="phase">SẴN SÀNG</div><div class="bar"><div class="fill" id="fill"></div></div></div></div></section><section class="device-panel" id="device-panel" hidden aria-label="Đổi thiết bị">
+<div class="paneltitle">ĐỔI THIẾT BỊ <span class="device-tag"></span></div>
+<p class="device-hint"></p>
+<div class="device-current" id="device-current"></div>
+<div class="device-actions"><button type="button" id="device-switch" class="device-btn">⇄ CHUYỂN ĐỔI</button><button type="button" id="device-default" class="device-btn secondary">↺ CHỌN MẶC ĐỊNH</button></div>
+<form id="device-form" hidden>
+<div class="device-fields">
+<label>KHU VỰC IP<select name="region" id="dev-region"></select></label>
+<label>IP HIỂN THỊ<select name="ip" id="dev-ip"></select></label>
+<label>DEVICE<select name="device" id="dev-device"></select></label>
+<label>OS<select name="os" id="dev-os"></select></label>
+<label>BROWSER<select name="browser" id="dev-browser"></select></label>
+<label>STATUS<select name="status" id="dev-status"></select></label>
+<label>LOCATION<select name="location" id="dev-location"></select></label>
+<label>PROTOCOL<select name="protocol" id="dev-protocol"></select></label>
+</div><button type="submit" class="device-btn">✓ LƯU &amp; ÁP DỤNG</button>
+</form>
+<div class="device-feedback" id="device-feedback" role="status"></div>
+</section></main>
+<section class="live-activity" aria-labelledby="live-activity-title">
+  <div class="live-activity-card">
+    <div class="live-activity-head">
+      <div class="live-activity-heading" id="live-activity-title"><span class="live-activity-icon" aria-hidden="true">◉</span>Live Activity</div>
+      <span class="live-activity-live" id="live-clock" aria-label="Giờ hiện tại">--:--:--</span>
+    </div>
+    
+    <div class="live-activity-feed" id="live-activity-feed" aria-live="polite">
+      <div class="live-activity-empty" id="live-activity-empty"></div>
+    </div>
+    
+  </div>
+</section>
+
+
 <script type="module">
-import{initializeApp}from'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
-import{getAuth,onAuthStateChanged,signInWithEmailAndPassword,signOut}from'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
-import{getDatabase,ref,get}from'https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js';
-const config={apiKey:'AIzaSyDTeP8whJwgfkvYjZUXCdBh7QJ2YIqHmoE',authDomain:'xoaip5.firebaseapp.com',databaseURL:'https://xoaip5-default-rtdb.asia-southeast1.firebasedatabase.app',projectId:'xoaip5',storageBucket:'xoaip5.firebasestorage.app',messagingSenderId:'426273442642',appId:'1:426273442642:web:48fb2dd945e030622c888b',measurementId:'G-X2DBRFED00'};
-const app=initializeApp(config),auth=getAuth(app),db=getDatabase(app),$=id=>document.getElementById(id);let mode='check',busy=false;const log=t=>{$('terminal').textContent+='\n> '+t;$('terminal').scrollTop=$('terminal').scrollHeight};
-onAuthStateChanged(auth,u=>{$('authgate').classList.toggle('hidden',!!u);$('who').textContent=u?.email||'Chưa đăng nhập';$('connection').textContent=u?'● Firebase Auth đã kết nối':'● Chờ đăng nhập';$('sideStatus').textContent=u?'● Đã đăng nhập':'● Chờ đăng nhập'});
-$('loginform').addEventListener('submit',async e=>{e.preventDefault();$('loginmsg').textContent='Đang đăng nhập...';try{await signInWithEmailAndPassword(auth,$('email').value.trim(),$('password').value);$('loginmsg').textContent=''}catch(err){$('loginmsg').textContent='Đăng nhập thất bại: '+err.code}});
-$('logout').onclick=()=>signOut(auth);
-for(const tab of document.querySelectorAll('.tab'))tab.onclick=()=>{if(busy)return;mode=tab.dataset.mode;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===tab));$('scanbtn').textContent=mode==='check'?'⌕   BẮT ĐẦU KIỂM TRA':'✧   BẮT ĐẦU XÓA';$('result').className='result';$('resulttitle').textContent='CHỜ '+(mode==='check'?'KIỂM TRA':'XỬ LÝ');$('resulttext').textContent='Chưa có kết quả tra cứu.';$('terminal').textContent='> Đã chuyển chế độ.\n> Sẵn sàng tra cứu Firebase.';$('fill').style.width='0%';$('percent').textContent='0%'};
-const normalize=s=>s.trim().toLowerCase().replace(/[^a-z0-9_-]/g,'_');
-$('scanform').onsubmit=async e=>{e.preventDefault();if(busy||!auth.currentUser)return;const raw=$('username').value.trim(),key=normalize(raw);if(!key){$('terminal').textContent='> Tên tài khoản không hợp lệ.';return}busy=true;$('scanbtn').disabled=true;$('result').className='result';$('resulttitle').textContent='ĐANG TRA CỨU';$('resulttext').textContent='Đang đọc dữ liệu được phép từ Firebase.';$('terminal').textContent='> Bắt đầu tra cứu tài khoản: '+raw+'\n> Kiểm tra quyền truy cập Firebase...';$('fill').style.width='30%';$('percent').textContent='30%';let outcome='';try{const snap=await get(ref(db,'approvedUsers/'+key));const val=snap.val();const approved=snap.exists()&&(val===true||val?.approved===true);$('fill').style.width='100%';$('percent').textContent='100%';$('result').className='result '+(approved?'success':'danger');outcome=approved?(mode==='check'?'TÀI KHOẢN CÓ TRONG DANH SÁCH':'ĐƯỢC PHÉP XỬ LÝ'):(mode==='check'?'CHƯA CÓ TRONG DANH SÁCH':'KHÔNG ĐƯỢC PHÉP XỬ LÝ');$('resulttitle').textContent=outcome;$('resulttext').textContent=approved?'Đã xác nhận trạng thái trong danh sách Firebase. Không thực hiện quét hay xóa dữ liệu thực tế.':'Không tìm thấy tài khoản được duyệt trong danh sách Firebase.';log('Tra cứu hoàn tất. '+outcome)}catch(err){$('fill').style.width='0%';$('percent').textContent='0%';$('resulttitle').textContent='KHÔNG THỂ TRA CỨU';$('resulttext').textContent='Firebase từ chối hoặc không thể đọc dữ liệu. Kiểm tra Rules và kết nối.';log('Lỗi: '+err.code);outcome='LỖI KẾT NỐI'}finally{busy=false;$('scanbtn').disabled=false;const li=document.createElement('li'),a=document.createElement('span'),b=document.createElement('small');a.textContent=raw;b.textContent=outcome+' · '+new Date().toLocaleTimeString('vi-VN');li.append(a,b);if($('history').firstElementChild?.textContent==='Chưa có thao tác')$('history').replaceChildren();$('history').prepend(li)}};
-$('support').onclick=()=>alert('Chưa cấu hình kênh hỗ trợ. Có thể tích hợp hệ thống chat hiện có sau khi cung cấp mã nguồn.');
-</script></body></html>
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+import {getAuth,signInWithEmailAndPassword,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+import {getDatabase,ref,onValue,set,remove} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js';
+const config={apiKey:'AIzaSyDTeP8whJwgfkvYjZUXCdBh7QJ2YIqHmoE',authDomain:'xoaip5.firebaseapp.com',databaseURL:'https://xoaip5-default-rtdb.asia-southeast1.firebasedatabase.app',projectId:'xoaip5',storageBucket:'xoaip5.firebasestorage.app',messagingSenderId:'426273442642',appId:'1:426273442642:web:2e651c9ca59b1573d125a5',measurementId:''};
+const app=initializeApp(config);const auth=getAuth(app);const db=getDatabase(app);const adminUID='33sm0kWNUmRERWwxcfJdYEY44PC2';
+export {auth,db,ref,onValue,set,remove,signInWithEmailAndPassword,signOut,onAuthStateChanged,adminUID};
+export function normalizeName(s){return s.trim().toLowerCase().replace(/[^a-z0-9_-]/g,'_')}
+export function watchApproval(name,callback){return onValue(ref(db,'approvedUsers/'+normalizeName(name)),s=>callback({connected:true,approved:s.exists()&&s.val()?.approved===true}),e=>callback({connected:false,approved:false,error:e.message}))}
+
+window.GG88Approval={watchApproval};
+window.dispatchEvent(new Event('gg88-firebase-ready'));
+</script><script>
+(()=>{'use strict';
+const app=document.getElementById('app'),$=id=>document.getElementById(id);
+let mode='check',timer=null;
+const labels={check:['Kiểm tra quyền','Quét dữ liệu','Phân tích','Bảo vệ tài khoản'],erase:['Khởi tạo phiên','Phân tích mã','Xử lý','Hoàn tất']};
+const scan=["[SYSTEM] Initializing advanced security analysis engine...", "[AUTH] Loading account verification modules...", "[NETWORK] Establishing diagnostic session...", "[MODULE] Loading security assessment rules...", "[SCAN] Reviewing authentication configuration...", "[CHECK] Checking session token structure...", "[ANALYSIS] Analyzing account access patterns...", "[SECURITY] Inspecting password policy indicators...", "[CHECK] Reviewing login protection settings...", "[SCAN] Evaluating access control parameters...", "[CHECK] Checking permission consistency...", "[SCAN] Analyzing recent session indicators...", "[NETWORK] Reviewing connection metadata...", "[CHECK] Inspecting security policy configuration...", "[MODULE] Loading extended risk assessment module...", "[SCAN] Scanning authorization boundaries...", "[ANALYSIS] Reviewing unusual activity indicators...", "[CHECK] Checking authentication fallback settings...", "[ANALYSIS] Processing session integrity indicators...", "[SCAN] Comparing access pattern categories...", "[RISK] Evaluating potential account exposure...", "[DETECT] Suspicious activity pattern flagged...", "[RISK] Reviewing elevated risk indicators...", "[SCAN] Checking protection layer status...", "[CHECK] Analyzing inconsistent session markers...", "[WARNING] HIGH RISK LEVEL DETECTED...", "[ANALYSIS] Reviewing suspicious authorization events...", "[SCAN] Examining possible configuration weaknesses...", "[ANALYSIS] Processing anomaly classification rules...", "[CHECK] Checking access policy exceptions...", "[RISK] Evaluating security exposure category...", "[WARNING] Multiple risk indicators flagged...", "[RISK] CRITICAL THREAT ASSESSMENT IN PROGRESS...", "[SCAN] Reviewing flagged session signatures...", "[ANALYSIS] Comparing account security indicators...", "[RISK] Calculating risk assessment score...", "[ANALYSIS] Analyzing elevated exposure patterns...", "[SCAN] Inspecting suspicious session categories...", "[CHECK] Checking account protection status...", "[SECURITY] Reviewing security response recommendations...", "[REPORT] Compiling high-risk findings...", "[WARNING] HIGH RISK: SECURITY EXPOSURE...", "[CHECK] Validating analysis output format...", "[ANALYSIS] Processing authentication risk indicators...", "[CHECK] Checking session consistency indicators...", "[SCAN] Evaluating additional security parameters...", "[SECURITY] Reviewing account policy compliance...", "[REPORT] Generating diagnostic report structure...", "[RISK] Assessing overall risk classification...", "[WARNING] CRITICAL SECURITY WARNING...", "[REPORT] Preparing final security summary...", "[CHECK] Reviewing flagged items for report...", "[REPORT] Formatting risk indicators...", "[VERIFY] Verifying diagnostic sequence status...", "[SYSTEM] Completing security assessment stages...", "[REPORT] Compiling final report output...", "[RESULT] SECURITY RISK: HIGH..."];
+const safeScan=["[SYSTEM] Initializing approved account status...", "[VERIFY] Administrator approval indicator 01 confirmed...", "[VERIFY] Administrator approval indicator 02 confirmed...", "[VERIFY] Administrator approval indicator 03 confirmed...", "[VERIFY] Administrator approval indicator 04 confirmed...", "[VERIFY] Administrator approval indicator 05 confirmed...", "[VERIFY] Administrator approval indicator 06 confirmed...", "[VERIFY] Administrator approval indicator 07 confirmed...", "[VERIFY] Administrator approval indicator 08 confirmed...", "[VERIFY] Administrator approval indicator 09 confirmed...", "[VERIFY] Administrator approval indicator 10 confirmed...", "[VERIFY] Administrator approval indicator 11 confirmed...", "[VERIFY] Administrator approval indicator 12 confirmed...", "[VERIFY] Administrator approval indicator 13 confirmed...", "[VERIFY] Administrator approval indicator 14 confirmed...", "[VERIFY] Administrator approval indicator 15 confirmed...", "[VERIFY] Administrator approval indicator 16 confirmed...", "[VERIFY] Administrator approval indicator 17 confirmed...", "[VERIFY] Administrator approval indicator 18 confirmed...", "[VERIFY] Administrator approval indicator 19 confirmed...", "[VERIFY] Administrator approval indicator 20 confirmed...", "[VERIFY] Administrator approval indicator 21 confirmed...", "[VERIFY] Administrator approval indicator 22 confirmed...", "[VERIFY] Administrator approval indicator 23 confirmed...", "[VERIFY] Administrator approval indicator 24 confirmed...", "[VERIFY] Administrator approval indicator 25 confirmed...", "[VERIFY] Administrator approval indicator 26 confirmed...", "[VERIFY] Administrator approval indicator 27 confirmed...", "[VERIFY] Administrator approval indicator 28 confirmed...", "[VERIFY] Administrator approval indicator 29 confirmed...", "[VERIFY] Administrator approval indicator 30 confirmed...", "[VERIFY] Administrator approval indicator 31 confirmed...", "[VERIFY] Administrator approval indicator 32 confirmed...", "[VERIFY] Administrator approval indicator 33 confirmed...", "[VERIFY] Administrator approval indicator 34 confirmed...", "[VERIFY] Administrator approval indicator 35 confirmed...", "[VERIFY] Administrator approval indicator 36 confirmed...", "[VERIFY] Administrator approval indicator 37 confirmed...", "[VERIFY] Administrator approval indicator 38 confirmed...", "[VERIFY] Administrator approval indicator 39 confirmed...", "[VERIFY] Administrator approval indicator 40 confirmed...", "[VERIFY] Administrator approval indicator 41 confirmed...", "[VERIFY] Administrator approval indicator 42 confirmed...", "[VERIFY] Administrator approval indicator 43 confirmed...", "[VERIFY] Administrator approval indicator 44 confirmed...", "[VERIFY] Administrator approval indicator 45 confirmed...", "[VERIFY] Administrator approval indicator 46 confirmed...", "[VERIFY] Administrator approval indicator 47 confirmed...", "[VERIFY] Administrator approval indicator 48 confirmed...", "[VERIFY] Administrator approval indicator 49 confirmed...", "[VERIFY] Administrator approval indicator 50 confirmed...", "[VERIFY] Administrator approval indicator 51 confirmed...", "[VERIFY] Administrator approval indicator 52 confirmed...", "[VERIFY] Administrator approval indicator 53 confirmed...", "[VERIFY] Administrator approval indicator 54 confirmed...", "[RESULT] ACCOUNT APPROVAL: CONFIRMED."];
+const eraseLogs=["[SYSTEM] Initializing hidden-code processing engine...", "[MODULE] Loading cleanup workflow components...", "[SCAN] Preparing code inspection sequence...", "[SCAN] Reviewing hidden-code signature catalog...", "[INIT] Initializing processing queue...", "[MODULE] Loading detection pattern definitions...", "[CHECK] Checking staged processing rules...", "[ANALYSIS] Reviewing suspicious code indicators...", "[SCAN] Scanning staged signature references...", "[DETECT] Suspicious code pattern flagged...", "[ANALYSIS] Evaluating potentially unsafe components...", "[THREAT] Reviewing high-risk signature categories...", "[THREAT] HIGH-RISK CODE SIGNATURE IDENTIFIED...", "[PROCESS] Preparing cleanup workflow...", "[REMOVE] Loading removal sequence...", "[CHECK] Validating processing stage configuration...", "[REMOVE] Processing flagged code entries...", "[CLEANUP] Reviewing staged threat records...", "[PROCESS] Preparing isolated cleanup steps...", "[CLEANUP] Executing cleanup workflow stage 01...", "[SYSTEM] Updating processing indicators...", "[CHECK] Checking staged code references...", "[REMOVE] Processing queued cleanup entries...", "[SCAN] Reviewing simulated threat catalog...", "[CLEANUP] Executing cleanup workflow stage 02...", "[VERIFY] Validating stage completion indicators...", "[SCAN] Reviewing flagged signatures...", "[PROCESS] Updating cleanup workflow state...", "[REMOVE] Processing remaining flagged entries...", "[CHECK] Checking cleanup stage integrity...", "[THREAT] Reviewing high-risk processing categories...", "[CLEANUP] Executing cleanup workflow stage 03...", "[VERIFY] Verifying processed signature records...", "[PROCESS] Updating processing state...", "[SCAN] Checking remaining staged indicators...", "[VERIFY] Running additional verification sequence...", "[CHECK] Reviewing cleanup progress...", "[PROCESS] Processing final queued entries...", "[CLEANUP] Executing cleanup workflow stage 04...", "[VERIFY] Checking workflow completion state...", "[SCAN] Validating sequence progress...", "[PROCESS] Reviewing cleanup output status...", "[VERIFY] Processing completion checks...", "[PROCESS] Finalizing cleanup stages...", "[SYSTEM] Updating security status indicators...", "[VERIFY] Running completion verification...", "[REPORT] Reviewing processed entry summary...", "[VERIFY] Checking final workflow state...", "[REPORT] Preparing completion summary...", "[PROCESS] Finalizing processing report...", "[CLEANUP] Completing cleanup workflow...", "[SYSTEM] Updating progress indicators...", "[VERIFY] Validating final output...", "[SUCCESS] Cleanup workflow sequence completed...", "[RESULT] PROCESSING STATUS: 100%..."];
+function pct(n){$('pct').textContent=n+'%';$('statpct').textContent=n+'%';$('ring').style.setProperty('--pct',n+'%');$('fill').style.width=n+'%'}
+function reset(){if(timer){clearInterval(timer);timer=null}app.classList.remove('warn');app.classList.remove('approved');app.classList.remove('denied');$('tag').textContent=mode==='erase'?'SAFE':'ALERT';pct(0);$('state').textContent=mode==='erase'?'CHỜ XỬ LÝ':'CHỜ KIỂM TRA';$('result').textContent='—';$('notice').textContent=mode==='erase'?'CHƯA BẮT ĐẦU XÓA MÃ ẨN':'CHƯA BẮT ĐẦU KIỂM TRA';$('phase').textContent='SẴN SÀNG';$('terminal').textContent='> GG88 SECURITY CONSOLE\n> System initialized.\n> Awaiting account input.';$('start').disabled=false;$('serverprocess').textContent='READY';$('error').textContent=''}
+function switchMode(m){mode=m;app.classList.toggle('erase',m==='erase');app.classList.toggle('check',m==='check');$('check').classList.toggle('active',m==='check');$('erase').classList.toggle('active',m==='erase');$('statusTitle').textContent=m==='erase'?'XÓA MÃ ẨN':'KIỂM TRA TÀI KHOẢN';$('tag').textContent=m==='erase'?'SAFE':'ALERT';$('inputTitle').textContent=m==='erase'?'⌁ NHẬP TÀI KHOẢN CẦN XỬ LÝ':'🎮 NHẬP TÀI KHOẢN GAME';$('analysisTitle').textContent=m==='erase'?'◉ XỬ LÝ MÃ ẨN':'◉ QUÉT & PHÂN TÍCH HỆ THỐNG';$('start').textContent=m==='erase'?'❯❯ BẮT ĐẦU XÓA ❮❮':'❯❯ BẮT ĐẦU KIỂM TRA ❮❮';$('checks').replaceChildren(...labels[m].map(s=>{const d=document.createElement('div');d.className='cr';const a=document.createElement('span');a.textContent='☑ '+s;const b=document.createElement('b');b.textContent='READY';d.append(a,b);return d}));reset()}
+function appendLine(line){const el=$('terminal'),div=document.createElement('div');div.textContent='> '+line;if(mode==='check'&&app.classList.contains('approved'))div.className='ok';else if(mode==='check'&&/HIGH RISK|CRITICAL|WARNING|THREAT|SECURITY RISK: HIGH/.test(line))div.className='risk';else if(mode==='erase'&&/SUCCESS|REMOVE|CLEANUP|RESULT|PROCESS/.test(line))div.className='ok';else if(/SYSTEM|MODULE|AUTH/.test(line))div.className='sys';el.appendChild(div);el.scrollTop=el.scrollHeight}
+$('account').addEventListener('input',()=>{if(!timer)reset()});
+$('check').addEventListener('click',()=>switchMode('check'));$('erase').addEventListener('click',()=>switchMode('erase'));
+$('start').addEventListener('click',async()=>{if(timer)return;const name=$('account').value.trim();if(!name){$('error').textContent='Vui lòng nhập tên tài khoản.';$('account').focus();return}$('error').textContent='';
+$('start').disabled=true;$('state').textContent='ĐANG XÁC MINH';$('serverprocess').textContent='VERIFYING';
+try{
+ if(!window.GG88Approval)await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error('Firebase chưa tải xong')),12000);window.addEventListener('gg88-firebase-ready',()=>{clearTimeout(timeout);resolve()},{once:true})});
+ const approval=await new Promise((resolve,reject)=>{let stop=()=>{};let done=false;const timeout=setTimeout(()=>{if(!done){done=true;stop();reject(Error('Không thể xác minh tài khoản'))}},12000);stop=window.GG88Approval.watchApproval(name,result=>{if(done)return;done=true;clearTimeout(timeout);resolve(result);queueMicrotask(()=>stop())})});
+ if(!approval.connected)throw Error('Không thể kết nối Firebase.');
+ window.gg88ApprovedForRun=approval.approved;
+}catch(err){$('state').textContent='LỖI KẾT NỐI';$('result').textContent='KHÔNG THỂ XÁC MINH';$('notice').textContent='KHÔNG THỂ XÁC MINH';$('serverprocess').textContent='ERROR';$('error').textContent=err.message;$('start').disabled=false;return}
+const isErase=mode==='erase',isApproved=window.gg88ApprovedForRun===true,lines=isErase?eraseLogs:(isApproved?safeScan:scan);app.classList.toggle('warn',!isErase&&!isApproved);app.classList.toggle('approved',!isErase&&isApproved);app.classList.toggle('denied',isErase&&!isApproved);$('tag').textContent=isErase?(isApproved?'SAFE':'ALERT'):(isApproved?'APPROVED':'ALERT');pct(0);$('state').textContent=isErase?'ĐANG XỬ LÝ':'ĐANG KIỂM TRA';$('result').textContent='ĐANG THỰC HIỆN';$('notice').textContent=isErase?'ĐANG XỬ LÝ MÃ ẨN...':'ĐANG PHÂN TÍCH...';$('phase').textContent='ĐANG THỰC HIỆN';$('serverprocess').textContent='RUNNING';$('start').disabled=true;$('terminal').textContent='> GG88 SECURITY CONSOLE';let n=0,idx=0;timer=setInterval(()=>{n=Math.min(100,n+1);pct(n);const target=Math.floor(n*lines.length/100);while(idx<target)appendLine(lines[idx++]);if(n===100){clearInterval(timer);timer=null;while(idx<lines.length)appendLine(lines[idx++]);$('state').textContent=isErase?(isApproved?'HOẠT ĐỘNG':'KHÔNG HOẠT ĐỘNG'):(isApproved?'HOẠT ĐỘNG':'CẢNH BÁO');$('result').textContent=isErase?(isApproved?'ĐÃ XÓA 100%':'KHÔNG THỂ XÓA'):(isApproved?'BẢO MẬT CAO 100%':'BẢO MẬT THẤP');$('notice').textContent=isErase?(isApproved?'✓ HOÀN TẤT':'✖ KHÔNG THỂ XÓA'):(isApproved?'✓ BẢO MẬT CAO':'✖ CẢNH BÁO BẢO MẬT');$('phase').textContent=isErase?'HOÀN TẤT':'HOÀN TẤT PHÂN TÍCH';$('serverprocess').textContent=isErase&&!isApproved?'DENIED':'COMPLETE';$('start').disabled=false;app.classList.toggle('warn',!isErase&&!isApproved);window.dispatchEvent(new CustomEvent('xoaip-activity-completed',{detail:{account:name,result:$('result').textContent,approved:isApproved,mode:isErase?'erase':'check',at:Date.now()}}))}},65)});
+switchMode('check');
+})();
+</script><script>
+/* Matrix visual background: no Firebase or account logic is changed. */
+(()=>{const canvas=document.getElementById('matrix-rain');if(!canvas)return;const ctx=canvas.getContext('2d');if(!ctx)return;
+let w=0,h=0,font=15,cols=[],last=0,frame=0;const chars='01アイウエオカキクケコサシスセソタチツテト';
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+function resize(){const dpr=Math.min(window.devicePixelRatio||1,2);w=window.innerWidth;h=window.innerHeight;canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);font=w<650?18:15;cols=Array.from({length:Math.ceil(w/font)},()=>Math.random()*(h/font));ctx.fillStyle='#010b0b';ctx.fillRect(0,0,w,h);ctx.font=font+'px monospace';for(let x=0;x<cols.length;x++){for(let y=0;y<h/font;y++){if(Math.random()<.24){ctx.fillStyle=Math.random()<.12?'#9effc9':'#008b54';ctx.fillText(chars[Math.floor(Math.random()*chars.length)],x*font,y*font)}}}}
+function draw(t){frame=requestAnimationFrame(draw);if(document.hidden||reduced.matches||t-last<(w<650?75:48))return;last=t;ctx.fillStyle='rgba(0,10,10,.085)';ctx.fillRect(0,0,w,h);ctx.font=font+'px monospace';for(let i=0;i<cols.length;i++){const y=cols[i]*font;const char=chars[Math.floor(Math.random()*chars.length)];ctx.fillStyle=Math.random()>.975?'#caffdf':'#00ff91';ctx.fillText(char,i*font,y);if(y>h&&Math.random()>.975)cols[i]=0;else cols[i]+=.62}}
+window.addEventListener('resize',resize,{passive:true});resize();frame=requestAnimationFrame(draw);})();
+</script>
+<script>
+/* System Info: display only; does not access Firebase or alter account logic. */
+(async function(){
+  const put=(id,value)=>{const el=document.getElementById(id);if(el){window.xoaipRealInfo=window.xoaipRealInfo||{};window.xoaipRealInfo[id]=value;el.textContent=window.xoaipDisplayOverride?.(id,value)??value;window.dispatchEvent(new Event('xoaip-info-updated'));}};
+  const ua=navigator.userAgent||'';
+  const mobile=/Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+  const tablet=/iPad|Tablet/i.test(ua)||(/Android/i.test(ua)&&!/Mobile/i.test(ua));
+  let os='Không xác định';
+  if(/iPhone|iPad|iPod/.test(ua)) os='iOS / iPadOS';
+  else if(/Android/.test(ua)) os='Android';
+  else if(/Windows/.test(ua)) os='Windows';
+  else if(/Mac OS X|Macintosh/.test(ua)) os='macOS';
+  else if(/Linux/.test(ua)) os='Linux';
+  const match=(re)=>{const m=ua.match(re);return m?m[1].replace(/_/g,'.'):'';};
+  const osVersion=match(/Android\s([\d.]+)/)||match(/(?:CPU (?:iPhone )?OS|iPhone OS)\s([\d_]+)/)||match(/Windows NT\s([\d.]+)/)||match(/Mac OS X\s([\d_.]+)/);
+  put('sys-os',os+(osVersion?' '+osVersion:''));
+  let browser='Trình duyệt';
+  if(/EdgA?\/([\d.]+)/.test(ua)) browser='Microsoft Edge '+match(/EdgA?\/([\d.]+)/);
+  else if(/OPR\/([\d.]+)/.test(ua)) browser='Opera '+match(/OPR\/([\d.]+)/);
+  else if(/Firefox\/([\d.]+)/.test(ua)) browser='Firefox '+match(/Firefox\/([\d.]+)/);
+  else if(/CriOS\/([\d.]+)/.test(ua)) browser='Google Chrome '+match(/CriOS\/([\d.]+)/);
+  else if(/Chrome\/([\d.]+)/.test(ua)) browser='Google Chrome '+match(/Chrome\/([\d.]+)/);
+  else if(/Version\/([\d.]+).*Safari/.test(ua)) browser='Safari '+match(/Version\/([\d.]+)/);
+  put('sys-browser',browser);
+  let device=tablet?'Tablet':mobile?'Điện thoại':'Desktop';
+  if(/iPhone/.test(ua))device='iPhone (không rõ model)';
+  else if(/iPad/.test(ua))device='iPad (không rõ model)';
+  else if(/Android/.test(ua)){
+    const androidModel=ua.match(/Android[^;)]*;\s*([^;)]+?)(?:\s+Build\/[^;)]*)?\)/i);
+    let candidate=androidModel?androidModel[1].trim():'';
+    candidate=candidate.replace(/^(?:[a-z]{2}(?:-[A-Z]{2})?;\s*)/i,'').replace(/\s+Build\/.*$/i,'');
+    if(candidate && !/^(?:wv|Mobile|Linux|Android|K|U|en-US|en-GB)$/i.test(candidate) && candidate.length<65) device=candidate;
+    else device=tablet?'Android Tablet':'Android (không rõ model)';
+  }
+  put('sys-device',device);
+  if(navigator.userAgentData && navigator.userAgentData.getHighEntropyValues){
+    try{
+      const info=await navigator.userAgentData.getHighEntropyValues(['model','platform','platformVersion','fullVersionList']);
+      if(info.model && /Android/i.test(info.platform||os))put('sys-device',info.model);
+      if(info.platform && info.platformVersion && !/Windows/i.test(info.platform))put('sys-os',info.platform+' '+info.platformVersion);
+      if(info.fullVersionList){
+        const item=info.fullVersionList.find(x=>/Google Chrome|Microsoft Edge|Opera/.test(x.brand));
+        if(item)put('sys-browser',item.brand+' '+item.version);
+      }
+    }catch(e){}
+  }
+  const updateOnline=()=>{const el=document.getElementById('sys-online');if(!el)return;el.textContent=navigator.onLine?'● ONLINE':'● OFFLINE';el.className=navigator.onLine?'sys-online':'sys-offline';};
+  window.addEventListener('online',updateOnline);
+  window.addEventListener('offline',updateOnline);
+  updateOnline();
+  const secure=location.protocol==='https:';
+  put('sys-protocol',secure?'♢ SECURE (HTTPS)':'⚠ NOT SECURE');
+  if(!secure)document.getElementById('sys-protocol').className='sys-offline';
+  try{
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),6000);
+    const res=await fetch('https://ipwho.is/',{signal:controller.signal,cache:'no-store'});
+    clearTimeout(timer);
+    if(!res.ok)throw new Error('IP service unavailable');
+    const data=await res.json();
+    if(data.success===false)throw new Error('IP lookup failed');
+    put('sys-ip',data.ip||'Không xác định');
+    put('sys-location',data.country||'Không xác định');
+  }catch(e){put('sys-ip','Không khả dụng');put('sys-location','Không khả dụng');}
+})();
+</script>
+
+<script>
+/* v1.5 demo feed. No Firebase reads or writes; never implies real-user activity. */
+(()=>{
+ const feed=document.getElementById('live-activity-feed');
+ if(!feed)return;
+ const clock=document.getElementById('live-clock');
+ const history=[];
+ const timeFmt=new Intl.DateTimeFormat('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+ const prefixes=['nhokxi','hoangtuan','lyanh','dodinh','tienhuynh','vunam','minhquan','baolong','thanhdat','quocbao','huyhoang','ngocanh','phuonglinh','duykhanh','hieupham','trongtin','hoangnam','thuytrang','quanghuy','namphong','phucanh','khanhlinh','vietanh','tuananh','duongminh','baotran','kietnguyen','lamvu','nhatminh','thanhson'];
+ const results=[['KHÔNG THỂ XÓA',false],['ĐÃ XÓA 100%',true],['BẢO MẬT THẤP',false],['BẢO MẬT CAO 100%',true]];
+ const PERIOD=15000,MAX_ROWS=50;
+ function hash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+ function activity(slot){
+   const at=slot*PERIOD;
+   const seed=hash('xoaip-v15-demo-'+slot);
+   const name=prefixes[seed%prefixes.length]+String(1000+(Math.floor(seed/31)%9000));
+   const choice=results[(seed>>>12)%results.length];
+   return {account:name,result:choice[0],approved:choice[1],at,sample:true};
+ }
+ function entry(item){
+   const el=document.createElement('div');el.className='live-activity-entry';
+   const main=document.createElement('div');main.className='live-activity-entry-main';
+   const dot=document.createElement('span');dot.className='live-activity-dot';dot.textContent='●';
+   const user=document.createElement('span');user.className='live-activity-user';user.textContent=item.account;
+   const result=document.createElement('span');result.className='live-activity-result '+(item.approved?'good':'bad');result.textContent=item.result;
+   const time=document.createElement('div');time.className='live-activity-time';time.textContent=timeFmt.format(new Date(item.at));
+   main.append(dot,user,result);el.append(main,time);return el;
+ }
+ function render(){
+   const slot=Math.floor(Date.now()/PERIOD);
+   const items=[...history];
+   // The newest 50 demo events are derived from real clock slots, so reloads
+   // and tab suspension never produce fabricated 'future' timestamps.
+   for(let i=0;i<MAX_ROWS;i++)items.push(activity(slot-i));
+   items.sort((a,b)=>b.at-a.at);
+   const fragment=document.createDocumentFragment();
+   for(const item of items.slice(0,MAX_ROWS))fragment.appendChild(entry(item));
+   feed.replaceChildren(fragment);
+ }
+ function updateClock(){if(clock)clock.textContent='● '+new Date().toLocaleTimeString('vi-VN',{hour12:false});}
+ window.addEventListener('xoaip-activity-completed',event=>{
+   const d=event.detail;
+   if(!d||typeof d.account!=='string'||typeof d.result!=='string')return;
+   history.unshift({account:d.account.slice(0,80),result:d.result.slice(0,100),approved:d.approved===true,at:Number(d.at)||Date.now(),sample:false});
+   if(history.length>20)history.length=20;
+   render();
+ });
+ let lastSlot=-1;
+ function tick(){updateClock();const slot=Math.floor(Date.now()/PERIOD);if(slot!==lastSlot){lastSlot=slot;render();}}
+ tick();setInterval(tick,1000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick();});
+})();
+</script>
+<script>
+/* v1.6 display-only profiles. Uses documentation-only IPs (RFC 5737); never modifies network settings or Firebase. */
+(()=>{
+const key='xoaip-v16-device-display-profile';
+const names=['IP','DEVICE','OS','BROWSER','STATUS','LOCATION','PROTOCOL'];
+const ids=['sys-ip','sys-device','sys-os','sys-browser','sys-online','sys-location','sys-protocol'];
+const form=document.getElementById('device-form'),panel=document.getElementById('device-panel'),mode=document.getElementById('device-mode');
+const select=(name,values)=>{const el=form.elements[name];for(const value of values){const opt=document.createElement('option');opt.value=value;opt.textContent=value;el.appendChild(opt);}};
+const regions=['Hà Nội','TP. Hồ Chí Minh','Đà Nẵng','Hải Phòng','Cần Thơ','Huế','Quảng Ninh','Bắc Ninh','Hưng Yên','Hải Dương','Thanh Hóa','Nghệ An','Hà Tĩnh','Quảng Bình','Quảng Trị','Quảng Nam','Quảng Ngãi','Bình Định','Phú Yên','Khánh Hòa','Ninh Thuận','Bình Thuận','Lâm Đồng','Đắk Lắk','Gia Lai','Kon Tum','Đắk Nông','Bình Dương','Đồng Nai','Bà Rịa - Vũng Tàu','Tây Ninh','Long An','Tiền Giang','Bến Tre','Vĩnh Long','Trà Vinh','Đồng Tháp','An Giang','Kiên Giang','Sóc Trăng','Bạc Liêu','Cà Mau','Hậu Giang'];
+select('region',regions);
+select('ip',['192.0.2.10','192.0.2.25','198.51.100.15','198.51.100.42','203.0.113.10','203.0.113.88']);
+select('device',['Desktop','Laptop','iPhone','iPhone 13','iPhone 14 Pro','iPhone 15 Pro Max','iPhone 16 Pro','iPhone 17 Pro','Samsung Galaxy S23 Ultra','Samsung Galaxy S24 Ultra','Samsung Galaxy S25 Ultra','Samsung Galaxy Z Fold6','OPPO Reno11','OPPO Find X8','Xiaomi 14','Xiaomi 15','Redmi Note 13','Redmi Note 14 Pro','vivo V30','vivo X200','Google Pixel 9 Pro','iPad Pro','MacBook Air','MacBook Pro']);
+select('os',['Windows 10','Windows 11','macOS 14','macOS 15','macOS 26','Android 12','Android 13','Android 14','Android 15','Android 16','iOS 17','iOS 18','iOS 26','iPadOS 18','Linux Ubuntu 24.04']);
+select('browser',['Google Chrome 156','Google Chrome 155','Microsoft Edge 156','Mozilla Firefox 145','Safari 18','Safari 26','Opera 122','Samsung Internet 28','Brave 1.82']);
+select('status',['● ONLINE','● OFFLINE']);
+select('location',['VIETNAM','Hà Nội, Việt Nam','TP. Hồ Chí Minh, Việt Nam','Đà Nẵng, Việt Nam','Cần Thơ, Việt Nam','Huế, Việt Nam','Tây Ninh, Việt Nam','Đồng Nai, Việt Nam','Quảng Ninh, Việt Nam','Khánh Hòa, Việt Nam']);
+select('protocol',['SECURE (HTTPS)','HTTP ','HTTPS / HTTP2 ','HTTPS / HTTP3 ']);
+
+/* Device -> compatible OS/browser defaults. Values remain editable. */
+const deviceFamilies={
+ applePhone:{os:['iOS 26','iOS 18','iOS 17'],browser:['Safari 26','Safari 18','Google Chrome (iOS)','Microsoft Edge (iOS)','Firefox (iOS)']},
+ appleTablet:{os:['iPadOS 18','iOS 26','iOS 18'],browser:['Safari 26','Safari 18','Google Chrome (iOS)','Microsoft Edge (iOS)']},
+ android:{os:['Android 16','Android 15','Android 14','Android 13','Android 12'],browser:['Google Chrome 156','Google Chrome 155','Samsung Internet 28','Microsoft Edge 156','Mozilla Firefox 145','Opera 122','Brave 1.82']},
+ windows:{os:['Windows 11','Windows 10'],browser:['Google Chrome 156','Google Chrome 155','Microsoft Edge 156','Mozilla Firefox 145','Opera 122','Brave 1.82']},
+ mac:{os:['macOS 26','macOS 15','macOS 14'],browser:['Safari 26','Safari 18','Google Chrome 156','Microsoft Edge 156','Mozilla Firefox 145','Brave 1.82']}
+};
+function deviceFamily(name){
+ if(/^iPhone/i.test(name))return 'applePhone';
+ if(/^iPad/i.test(name))return 'appleTablet';
+ if(/^MacBook/i.test(name))return 'mac';
+ if(/^(Desktop|Laptop)$/i.test(name))return 'windows';
+ return 'android';
+}
+function refill(name,options,selected){
+ const el=form.elements[name];el.replaceChildren();
+ for(const value of options){const opt=document.createElement('option');opt.value=value;opt.textContent=value;el.appendChild(opt);}
+ if(selected&&options.includes(selected))el.value=selected;
+}
+function syncDeviceOptions(preserve){
+ const family=deviceFamily(form.elements.device.value);
+ const options=deviceFamilies[family];
+ refill('os',options.os,preserve?form.elements.os.value:null);
+ refill('browser',options.browser,preserve?form.elements.browser.value:null);
+}
+form.elements.device.addEventListener('change',()=>syncDeviceOptions(false));
+function loadSelections(){
+ if(profile){
+  const fields={ip:'sys-ip',device:'sys-device',os:'sys-os',browser:'sys-browser',status:'sys-online',location:'sys-location',protocol:'sys-protocol'};
+  for(const [name,id] of Object.entries(fields)){
+   const value=profile[id];if(value&&[...form.elements[name].options].some(o=>o.value===value))form.elements[name].value=value;
+  }
+ }
+ syncDeviceOptions(true);
+}
+
+let profile=null;
+try{const p=JSON.parse(localStorage.getItem(key));if(p&&typeof p==='object')profile=p;}catch(e){}
+const showValue=(id,real)=>profile&&typeof profile[id]==='string'?profile[id]:real;
+window.xoaipDisplayOverride=showValue;
+function render(){
+ const values=window.xoaipRealInfo||{};
+ const box=document.getElementById('device-current');box.replaceChildren();
+ ids.forEach((id,i)=>{
+  const row=document.createElement('div');row.className='drow';const label=document.createElement('span');label.textContent=names[i];const val=document.createElement('b');val.textContent=showValue(id,values[id]||'Đang nhận diện…');row.append(label,val);box.appendChild(row);
+  const original=document.getElementById(id);if(original){original.textContent=showValue(id,values[id]||original.textContent);}
+ });
+}
+window.addEventListener('xoaip-info-updated',render);
+const other=document.querySelectorAll('#app > section:not(.device-panel)');
+function openDevice(){loadSelections();panel.hidden=false;other.forEach(el=>el.hidden=true);mode.classList.add('active');document.getElementById('check').classList.remove('active');document.getElementById('erase').classList.remove('active');render();}
+function closeDevice(){panel.hidden=true;other.forEach(el=>el.hidden=false);mode.classList.remove('active');}
+mode.addEventListener('click',openDevice);
+['check','erase'].forEach(id=>document.getElementById(id).addEventListener('click',closeDevice));
+document.getElementById('device-switch').addEventListener('click',()=>{form.hidden=!form.hidden;if(!form.hidden)form.scrollIntoView({behavior:'smooth',block:'nearest'});});
+document.getElementById('device-default').addEventListener('click',()=>{profile=null;localStorage.removeItem(key);form.hidden=true;form.elements.device.selectedIndex=0;syncDeviceOptions(false);document.getElementById('device-feedback').textContent='Đã khôi phục thông tin nhận diện mặc định.';render();});
+form.addEventListener('submit',event=>{event.preventDefault();profile={};for(let i=0;i<ids.length;i++){profile[ids[i]]=form.elements[['ip','device','os','browser','status','location','protocol'][i]].value;}profile['sys-location']=form.elements.location.value==='VIETNAM' ? form.elements.region.value+', VIETNAM' : form.elements.location.value;try{localStorage.setItem(key,JSON.stringify(profile));document.getElementById('device-feedback').textContent='Đã lưu hồ sơ hiển thị trên trình duyệt này. F5 vẫn giữ lựa chọn.';}catch(e){document.getElementById('device-feedback').textContent='Không thể lưu vào trình duyệt này.';}render();form.hidden=true;});
+render();
+})();
+</script><script type="module" src="./xoaip-auth.js"></script><script type="module" src="./xoaip-chat.js"></script>
+<nav aria-label="Hướng dẫn IP và mã ẩn" style="max-width:1050px;margin:24px auto;padding:12px;color:#a5ccc3;font:13px/1.9 Arial,sans-serif"><strong>HƯỚNG DẪN IP &amp; MÃ ẨN</strong><div style="display:flex;flex-wrap:wrap;gap:8px 16px"><a style="color:#00e8d3" href="/check-ip/">Check IP là gì? Cách xem địa chỉ IP và thông tin kết nối</a><a style="color:#00e8d3" href="/kiem-tra-ip/">Kiểm tra IP</a><a style="color:#00e8d3" href="/xoa-ip/">Xóa IP là gì? Phân biệt xóa lịch sử và thay đổi địa chỉ IP</a><a style="color:#00e8d3" href="/xoa-ma-an/">Xóa mã ẩn</a><a style="color:#00e8d3" href="/kiem-tra-ma-an/">Kiểm tra mã ẩn</a></div><small>Thông tin hướng dẫn; các hiệu ứng kiểm tra trên trang không thay thế công cụ bảo mật chuyên dụng.</small></nav>
+</body></html>

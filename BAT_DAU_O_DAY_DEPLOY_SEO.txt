@@ -1,0 +1,8 @@
+XOAIP USER SEO - HUONG DAN DEPLOY
+1. Giai nen ZIP.
+2. Trong repository XOAIP USER, thay the file index.html O THU MUC GOC bang index.html trong ZIP nay.
+3. Dam bao Vercel Root Directory tro den thu muc chua index.html nay; Production Branch dung branch vua push.
+4. Push len GitHub, cho Vercel Production Deployment thanh cong.
+5. Mo view-source:https://xoaip.online/ va tim <title>XOAIP Online | Check IP, Kiểm Tra IP và Mã Ẩn</title>.
+6. Sau khi xac nhan title moi, yeu cau Google thu thap lai URL.
+Luu y: ZIP co cac file index.html phu trong thu muc khac. Chi index.html O THU MUC GOC la trang chu can deploy.

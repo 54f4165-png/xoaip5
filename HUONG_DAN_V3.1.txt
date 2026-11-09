@@ -1,0 +1,6 @@
+XOAIP v3.1 — USER & ADMIN
+1. Mở chat hoặc chọn hội thoại sẽ tự cuộn tới tin nhắn mới nhất.
+2. Tin nhắn mới và ảnh tải xong cũng tự cuộn xuống cuối.
+3. Bong bóng USER có nhãn HỖ TRỢ XÓA ở phía trên.
+4. Giữ Firebase Spark, Cloudinary, badge chưa đọc và phóng to ảnh.
+5. Chép index.html và xoaip-chat.js vào đúng repository; commit và push.

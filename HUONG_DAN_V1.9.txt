@@ -1,0 +1,16 @@
+XOAIP v1.9 - CHAT FIREBASE
+
+1. Deploy USER và ADMIN trên Vercel bằng hai ZIP riêng.
+2. Firebase Authentication > Sign-in method > bật Anonymous và Email/Password.
+3. Firebase Realtime Database > Rules: dán nội dung database.rules.json rồi Publish.
+4. Firebase Storage: khởi tạo bucket và dán storage.rules vào Storage > Rules.
+5. adminUids/<UID admin> phải là Boolean true.
+6. Đăng nhập ADMIN qua email/mật khẩu đã tạo trong Firebase Authentication.
+7. USER mở nút 💬 và gửi tin; ADMIN có mục Chat ở cuối trang.
+8. Để ADMIN tải file lên Storage, cần cấp custom claim admin:true bằng Admin SDK trên môi trường bảo mật; KHÔNG gắn khóa service account vào HTML. ADMIN vẫn gửi tin nhắn văn bản mà không cần custom claim.
+9. File đính kèm tối đa 20 MB. Download URL chứa token chia sẻ: không gửi URL cho người lạ.
+10. Trình duyệt ẩn danh, xóa dữ liệu trình duyệt, hoặc đổi máy sẽ tạo UID chat mới; cần tài khoản đăng nhập nếu muốn khôi phục lịch sử trên nhiều thiết bị.
+11. Chưa kiểm thử trực tiếp Firebase/website GG88; hãy kiểm tra chức năng trên môi trường thử trước khi đưa lên production.
+
+FIREBASE: Giu nguyen du an cu xoaip5 cho cap USER/ADMIN nay. KHONG dung admin008-75abc.
+CHU Y: Can cau hinh Rules va Authentication tren xoaip5; sao luu Rules dang dung truoc khi thay doi. Khong ghi de Rules cua du an Firebase khac.

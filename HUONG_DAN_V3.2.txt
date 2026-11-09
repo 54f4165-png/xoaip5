@@ -1,0 +1,5 @@
+XOAIP USER v3.2 — Firebase xoaip5
+Chi thay link TRUY CAP GAME CONG QUOC TE AN TOAN thanh https://www.gg8835.com/?id=607446025
+Khong co iframe cua v3.3; nut mo lien ket o tab moi nhu ban truoc.
+Giu nguyen giao dien, Firebase, chat va ADMIN.
+Giai nen va upload index.html, xoaip-chat.js, hacker-icon.svg len root repository USER.

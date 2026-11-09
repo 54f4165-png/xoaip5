@@ -1,0 +1,11 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /chatUploads/{roomId}/{messageId}/{fileName} {
+      allow read: if request.auth != null && (request.auth.uid == roomId || request.auth.token.admin == true);
+      allow write: if request.auth != null && (request.auth.uid == roomId || request.auth.token.admin == true)
+        && request.resource.size <= 20 * 1024 * 1024
+        && (request.resource.contentType.matches('image/.*') || request.resource.contentType.matches('video/.*') || request.resource.contentType.matches('application/pdf') || request.resource.contentType.matches('text/plain') || request.resource.contentType.matches('application/zip') || request.resource.contentType.matches('application/vnd.*') || request.resource.contentType.matches('application/msword'));
+    }
+  }
+}

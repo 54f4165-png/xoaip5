@@ -1,0 +1,57 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "adminUids": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": false
+      }
+    },
+    "approvedUsers": {
+      ".read": "auth != null && root.child('adminUids').child(auth.uid).val() === true",
+      ".write": "auth != null && root.child('adminUids').child(auth.uid).val() === true",
+      "$username": {
+        ".read": true
+      }
+    },
+    "chatRooms": {
+      ".read": "auth != null && root.child('adminUids').child(auth.uid).val() === true",
+      "$room": {
+        ".read": "auth != null && (auth.uid === $room || root.child('adminUids').child(auth.uid).val() === true)",
+        "meta": {
+          ".write": "auth != null && (auth.uid === $room || root.child('adminUids').child(auth.uid).val() === true)",
+          ".validate": "newData.hasChildren(['updatedAt', 'lastMessage']) && newData.child('lastMessage').isString() && newData.child('lastMessage').val().length <= 200"
+        },
+        "messages": {
+          "$message": {
+            ".write": "auth != null && !data.exists() && ((auth.uid === $room && newData.child('senderRole').val() === 'user') || (root.child('adminUids').child(auth.uid).val() === true && newData.child('senderRole').val() === 'admin')) && newData.child('senderUid').val() === auth.uid",
+            ".validate": "newData.hasChildren(['text','senderUid','senderRole','createdAt']) && newData.child('text').isString() && newData.child('text').val().length <= 2000 && newData.child('createdAt').isNumber()"
+          }
+        },
+        "readStates": {
+          "$role": {
+            ".read": "auth != null && (auth.uid === $room || root.child('adminUids').child(auth.uid).val() === true)",
+            ".write": "auth != null && (($role === 'user' && auth.uid === $room) || ($role === 'admin' && root.child('adminUids').child(auth.uid).val() === true))",
+            ".validate": "newData.isNumber() && newData.val() <= now + 60000 && newData.val() >= 0"
+          }
+        },
+        "moderation": {
+          "spam": {
+            ".read": "auth != null && root.child('adminUids').child(auth.uid).val() === true",
+            ".write": "auth != null && root.child('adminUids').child(auth.uid).val() === true",
+            ".validate": "newData.isBoolean()"
+          }
+        }
+      }
+    },
+    "userRegistrations": {
+      ".read": "auth != null && root.child('adminUids').child(auth.uid).val() === true",
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || root.child('adminUids').child(auth.uid).val() === true)",
+        ".write": "auth != null && auth.uid === $uid && newData.exists()",
+        ".validate": "newData.hasChildren(['displayName','email','createdAt','lastLoginAt']) && newData.child('displayName').isString() && newData.child('displayName').val().length >= 2 && newData.child('displayName').val().length <= 40 && newData.child('email').val() === auth.token.email && newData.child('createdAt').isNumber() && (!data.exists() || newData.child('createdAt').val() === data.child('createdAt').val()) && newData.child('lastLoginAt').isNumber() && newData.child('lastLoginAt').val() <= now + 60000"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+XOAIP USER  - DANG KY BANG TEN TAI KHOAN, KHONG CAN GMAIL
+
+- Dang ky/Dang nhap bang ten tai khoan (3-24 ky tu ASCII, so, dau _), mat khau it nhat 6 ky tu.
+- Van dung Firebase Authentication Email/Password: he thong tu chuyen ten thanh dia chi noi bo <username>@login.xoaip.online. Khach KHONG can cung cap Gmail hay email.
+- Ten khach va UID dong bo userRegistrations sang ADMIN theo quy tac Firebase RTDB hien tai.
+- Khong ho tro 'Quen mat khau' qua email vi dia chi noi bo khong co hop thu. Can quy trinh ho tro dat lai mat khau an toan neu muon bo sung sau.
+- Tai khoan dang ky cu bang email khong the dang nhap bang ten tai khoan moi. Can giu duong dang nhap cu hoac chuyen doi tai khoan bang quy trinh xac minh chu so huu.
+- Can bat Firebase Authentication > Email/Password; cap nhat RTDB rules nhu ban truoc neu chua ap dung.
+- Neu muon doi domain noi bo, phai chuyen doi dong bo toan bo ten dang nhap; khong doi tuy tien.
+- Khong su dung email noi bo nay de gui email xac minh hay khoi phuc mat khau.

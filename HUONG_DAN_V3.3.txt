@@ -1,0 +1,9 @@
+XOAIP USER v3.3 - FIREBASE xoaip5
+
+- Da doi nut TRUY CAP GAME thanh nut mo trinh duyet nhung ngay trong trang.
+- Thanh dia chi chi doc, nut tai lai, phong toan man hinh, dong. Quay lai/tien toi khong hoat dong vi iframe khac nguon khong cho truy cap history.
+- Neu website dich chan iframe bang X-Frame-Options hoac CSP frame-ancestors thi khung se khong hien thi duoc game. Khong co cach hop le de vuot qua bang HTML/CSS/JS client-side.
+- Khong thay doi Firebase xoaip5, logic kiem tra tai khoan, xoa ma an, chat Cloudinary, ADMIN.
+- Deploy: thay index.html va xoaip-chat.js; giu cac anh va SVG di kem neu repository chua co.
+- URL dang nhung: https://09gg88.com/home/register?id=607446025
+- Kiem tra thuc te tren Vercel, Chrome va dien thoai truoc khi su dung.

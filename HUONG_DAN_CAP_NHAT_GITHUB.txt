@@ -1,0 +1,13 @@
+XOAIP - HUONG DAN CAP NHAT
+
+Da kiem tra index.html goc: khong co dau xung dot <<<<<<<, =======, >>>>>>>; co Google Analytics G-976BL2Q3J5 va favicon hacker xanh.
+
+QUAN TRONG: ZIP khong tu dong xu ly xung dot Git tren may.
+1. Trong GitHub Desktop, neu dang co cua so Resolve conflicts, bam Abort merge.
+2. Tren github.com vao repo x-a-m-n- > Add file > Upload files.
+3. Giai nen ZIP, tai cac file trong thu muc goc len GitHub (khong tai nguyen ZIP).
+4. Neu GitHub bao ten tep da ton tai, nen cap nhat file index.html va cac file favicon bang cach sua/ghi de trong repo.
+5. Commit changes. Tren GitHub Desktop, Pull origin de dong bo sau khi cap nhat tren web, KHONG push commit cu dang xung dot.
+6. Doi Vercel deploy. Mo https://xoaip.online/ va Google Analytics Realtime de kiem tra.
+
+Luu y: Google co the mat thoi gian de hien favicon moi.
